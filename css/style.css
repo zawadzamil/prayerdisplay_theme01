@@ -1,0 +1,605 @@
+ :root{
+   --degreeFrom: 180deg;
+   --degreeTo: 190deg;
+ }
+ #headerSection{
+  background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.9500175070028011) 14%, rgba(186,0,0,1) 53%, rgba(0,0,0,0.9444152661064426) 86%);
+ }
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../images/Sunset_mosque.jpg");
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 511px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 570px;
+  background-image: none;
+  min-height: 44px;
+  height: auto;
+  margin: -68px auto 0;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0 36px 0 30px;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none none solid;
+  margin: 7px auto 0 86px;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: none none solid;
+  margin: -25px auto 0 173px;
+  padding: 0;
+}
+
+.u-section-1 .u-icon-1 {
+  width: 22px;
+  height: 22px;
+  margin: -23px 64px 0 auto;
+}
+
+.u-section-1 .u-table-1 {
+  width: 528px;
+  margin: 7px auto 0 12px;
+}
+
+.u-block-8d3f-4 {
+  font-size: 1.875rem;
+}
+
+.u-section-1 .u-table-header-1 {
+  background-image: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+.tableHead{
+  background-color: #920707;
+}
+td{
+  background-color: #000;
+  opacity: 0.8;
+  
+  color: rgb(251, 206, 4);
+  
+ 
+
+  
+}
+
+
+.u-section-1 .u-table-cell-3 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: bold;
+  
+}
+
+.u-section-1 .u-table-cell-4 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+  
+ 
+}
+
+.u-section-1 .u-table-cell-5 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-6 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-7 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-8 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-9 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-10 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-11 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-table-cell-12 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.u-section-1 .u-gallery-1 {
+  height: 338px;
+  width: 485px;
+  margin: -366px 16px 0 auto;
+}
+
+.u-section-1 .u-carousel-indicators-1 {
+  position: absolute;
+  bottom: 10px;
+}
+
+.u-section-1 .u-carousel-item-1 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 20px;
+}
+
+.u-section-1 .u-carousel-item-2 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-2 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 20px;
+}
+
+.u-section-1 .u-carousel-item-3 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-3 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  padding: 20px;
+}
+
+.u-section-1 .u-carousel-control-1 {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-section-1 .u-carousel-control-2 {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-section-1 .u-group-2 {
+  width: 672px;
+  background-image: none;
+  min-height: 59px;
+  height: auto;
+  margin: -63px auto 9px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #000;
+  opacity: 0.9;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 2.5rem;
+  margin: 0;
+  
+}
+
+#playButton{
+ 
+  border-radius: 50%;
+}
+.qibla{
+  height: 200px;
+  width: 300px;
+  background-color: black;
+  display: inline;
+}
+.u-section-1 .u-shape-1 {
+  width: 570px;
+  height: 279px;
+  background-image: none;
+  margin: -283px 0 0 auto;
+}
+ 
+
+
+
+
+#compass {
+    
+	width: 200px; height: 200px;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	
+	border: 10px solid #777;
+	
+	background: radial-gradient(
+		ellipse cover,
+		white,
+		#A3E2FC
+	);
+	
+	box-shadow:
+		0 0 4px #000,
+		0 0 1px 8px #ccc,
+		5px 10px 15px #48436f;
+	
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* A bit of animation on hover would be nice too! */
+#compass:hover {
+	transform: skewX(-5deg) skewY(-2deg);
+	
+	box-shadow:
+		0 0 4px #000,
+		0 0 1px 8px #ccc,
+		8px 12px 3px 5px #666,
+		20px 28px 20px #afa9d7;
+}
+
+#compass:before {
+	content: '';
+	
+	border: 2px dashed #444;
+	position: absolute;
+	left: 10px; right: 10px;
+	bottom: 10px; top: 10px;
+	
+	border-radius: 50%;
+}
+
+#compass:after {
+	content: '';
+	
+	position: absolute;
+	left: -10px; right: -10px;
+	bottom: -10px; top: -10px;
+	
+	border-radius: 50%;
+	
+	background: linear-gradient(
+		-45deg,
+		rgba(255,255,255,0.9) 0%,
+		rgba(255,255,255,0.3) 47%,
+		rgba(255,255,255,0) 48%,
+		rgba(255,255,255,0) 100%
+	);
+}
+
+
+/* neat! lets position the directions now - N E S W */
+
+#compass span {
+
+	position: absolute;
+	font-weight: bold;
+}
+
+/* North */
+#compass span:nth-child(1) {
+	left: 95px; top: 20px;
+}
+/* South */
+#compass span:nth-child(3) {
+	left: 95px; bottom: 20px;
+}
+
+/* East */
+#compass span:nth-child(2) {
+	right: 25px; top: 90px;
+}
+/* West */
+#compass span:nth-child(4) {
+	left: 25px; top: 90px;
+}
+
+
+/* Next up, is the pointer */
+
+/* A bit of CSS3 animations on the pointer would be nice */
+@keyframes rotate {
+	from { transform: rotate(var(--degreeFrom)); }
+	to { transform: rotate(var(--degreeTo)); }
+}
+
+#pointer {
+	width: 60px; height: 30px;
+	
+	/* Centering it */
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	
+	/*background: black;*/
+	animation: rotate 5s cubic-bezier(1,.2,.5,1) infinite alternate;
+}
+
+/* Now the trick i wanna use to create a diamond
+shaped pointer is to skew the #pointer
+
+But for some reason that did'nt work hence I did it
+on #pointer:before */
+
+#pointer:before {
+	content: '';
+	
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	
+	background: linear-gradient(
+		-63deg,
+		rgba(79,188,242,1) 1%,
+		rgba(26,110,206,1) 50%,
+		rgba(216,216,216,1) 51%,
+		rgba(244, 94, 80, 0.281) 53%,
+		rgba(255, 45, 45, 0) 100%
+	);
+	
+	transform: skewX(60deg);
+}
+
+/* Looks good, lets make the pointer's joint now */
+
+#pointer:after {
+	content: '';
+	
+	width: 10px; height: 10px;
+	background: #4781c0;
+	border-radius: 50%;
+	box-shadow:
+		inset 0 0 4px 2px #4d4d4d,
+		0 0 5px 1px white;
+	
+	/* centering it */
+	position: absolute;
+	left: 50%; top: 50%;
+	margin-left: -5px; margin-top: -5px;
+}
+
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 501px;
+  }
+
+  .u-section-1 .u-group-1 {
+    height: auto;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 8px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-top: -27px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    color: rgb(0, 0, 0) !important;
+    margin-top: -24px;
+  }
+
+  .u-section-1 .u-table-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    width: 386px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: -21px;
+    margin-bottom: 12px;
+    height: auto;
+  }
+
+  .u-section-1 .u-shape-1 {
+    width: 392px;
+    height: 275px;
+    margin-top: -306px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 845px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-right: 30px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 5px;
+    margin-left: 84px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-top: -25px;
+    margin-left: 171px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-top: -26px;
+    margin-left: 403px;
+  }
+
+  .u-section-1 .u-table-1 {
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    width: 512px;
+    margin-top: 17px;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 0px;
+  }
+  .u-section-1 .u-shape-1 {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 634px;
+  }
+
+  .u-section-1 .u-group-1 {
+    width: 540px;
+    margin: 0 auto 0;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 85px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 172px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-left: 412px;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    margin-top: 20px;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 540px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 943px;
+  }
+
+  .u-section-1 .u-group-1 {
+    min-height: 95px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 8px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-top: 20px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-table-1 {
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-table-cell-3 {
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-4 {
+    font-size: 1.875rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-6 {
+    line-height: 0.8;
+    font-size: 1.875rem;
+  }
+
+  .u-section-1 .u-table-cell-8 {
+    line-height: 0.8;
+    font-size: 1.875rem;
+  }
+
+  .u-section-1 .u-table-cell-10 {
+    line-height: 0.8;
+    font-size: 1.875rem;
+  }
+
+  .u-section-1 .u-table-cell-12 {
+    line-height: 0.8;
+    font-size: 1.875rem;
+  }
+
+  .u-section-1 .u-gallery-1 {
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 0px;
+    margin-bottom: 9px;
+    min-height: 47px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: 8px;
+    font-size: 1.5rem;
+  }
+  .u-section-1 .u-shape-1 {
+    width: 340px;
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
