@@ -20,6 +20,11 @@ const isha = document.getElementById('isha');
 const locationText = document.getElementById('location');
 
 const compass = document.getElementById('pointer');
+const angle  = document.getElementById('angle');
+const coordinate  = document.getElementById('coordinate');
+
+
+const hijriDate = document.getElementById('hijriDate');
 // Playbutton Autoplay or Not
 const playButton = document.getElementById('playButton');
 let clicked = false;
@@ -83,9 +88,21 @@ function saveToArray(json){
         Isha = tConvert(Isha);
 
         const date = element.date; 
+        //Getting Hijri date from API
+        const hijri = date.hijri;
+        const hijriWeekday = hijri.weekday.en;
+        const hijriDay = hijri.day;
+        const hijriMonth = hijri.month.en;
+        const hijriYear = hijri.year;
+       
+        
+        ///////////////////////
+
+
         const day = date.gregorian.day;
         const month = date.gregorian.month.number;
         const year = date.gregorian.year;
+        //If day is today
        if(dd == day && mm == month && yyyy == year )
        {
           fajr.innerText = Fajr;
@@ -93,13 +110,18 @@ function saveToArray(json){
           asr.innerText = Asr;
           maghrib.innerText = Maghrib;
           isha.innerText = Isha;
+          hijriDate.innerText = hijriWeekday+', '+hijriDay+' '+hijriMonth+', '+hijriYear;
        }
+       //
+       //Getting Latitude and Longitude from API
        const directions = element.meta;
        latitude = directions.latitude;
        longitude = directions.longitude;
+       ///////////////////
        
       
     });
+    //Fetching Qibla Direction
     fetch('https://api.aladhan.com/v1/qibla/'+latitude+'/'+longitude+'')
     .then(response => response.json())
     .then(json => getQiblaDirection(json));
@@ -119,19 +141,35 @@ function tConvert (time) {
   }
   function getQiblaDirection(data){
       let direction = parseInt(data.data.direction);
+      let compassDirecton = direction;
+      coordinate.innerText = compassPosition(direction);
+      if(compassPosition(direction)=='NW') compassDirecton = compassDirecton-45;
+      else if(compassPosition(direction)=='E') compassDirecton = compassDirecton-90;
+      else if(compassPosition(direction)=='SE') compassDirecton = compassDirecton-135;
+      else if(compassPosition(direction)=='S') compassDirecton = compassDirecton-180;
+      else if(compassPosition(direction)=='SW') compassDirecton = compassDirecton-225;
+      else if(compassPosition(direction)=='W') compassDirecton = compassDirecton-270;
+      else if(compassPosition(direction)=='NW') compassDirecton = compassDirecton-315;
+      else compassDirecton = compassDirecton;
+      angle.innerText = compassDirecton;
+      
       let offset;
       if(direction >90){
           direction = direction-90;
-          offset = direction + 5;
+         offset = direction ; 
       }
       else{
           direction = 270+direction;
-          offset = direction - 5;
+          offset = direction ;
       }
       document.documentElement.style
       .setProperty('--degreeFrom', direction+'deg');
       document.documentElement.style
       .setProperty('--degreeTo', offset+'deg');
+      
+
+      //Finding Compass Direction
+      
      
   }
 
@@ -219,6 +257,43 @@ function play(){
     music.play();
     
 }
+
+// Compass Position Function (N,NE,SW,SE etc)
+function compassPosition(angle){
+    let coordinate = "SW";
+    if(angle>=0 && angle < 30){
+        coordinate = "N";
+    }
+    else if(angle>=30 && angle<=60){
+        coordinate = "NE";
+    }
+    else if(angle>60 && angle<120 ){
+        coordinate = "E";
+    }
+    else if(angle>=120 && angle<=150 ){
+        coordinate = "SE";
+    }
+    else if(angle>150 && angle<210 ){
+        coordinate = "S";
+    }
+    else if(angle>=210 && angle<=240 ){
+        coordinate = "SW";
+    }
+    else if(angle>240 && angle<300 ){
+        coordinate = "W";
+    }
+    else if(angle>=300 && angle<=330 ){
+        coordinate = "NW";
+    }
+    else{
+        coordinate = "N";
+    }
+    return coordinate;
+
+}
+
+
+
 
 
 
