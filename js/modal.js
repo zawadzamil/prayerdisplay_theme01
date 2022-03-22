@@ -101,6 +101,12 @@ $('#loc-sub-button').click(function(){
     $('#adhan').hide();
     $('#start').hide();
     $('#prayer').show();
+    $('#marquee').empty();
+
+    document.getElementById('marquee').innerHTML = ` <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
+    <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
+   <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
+   <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>`;
 
     if(cityId=='') alert('Please Select Country and City');
     else{

@@ -13,6 +13,7 @@ $.getJSON('https://admin.prayerdisplay.com/api/getLocation?ip='+data.ip,function
 $('#start').hide();
 $('#adhan').hide();
 $('#jamat').hide();
+
  
 
 
