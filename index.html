@@ -10,6 +10,7 @@
   <title>Prayer Time Display</title>
   <link rel="stylesheet" href="css/template.css" media="screen">
   <link rel="stylesheet" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="css/modal.css" media="screen">
   <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
   <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
@@ -17,7 +18,7 @@
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-
+<link rel="stylesheet" href="css/table.css" media="screen">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -39,7 +40,8 @@
     <div class="u-container-style u-expanded-width  u-group u-shape-rectangle u-group-1">
       <div class="u-container-layout u-container-layout-1" id="headerSection">
         <h1
-          class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default u-text-white u-text-1" id="time">
+          class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default u-text-white u-text-1"
+          id="time">
           11:54:59</h1>
         <h4 id="dateBottom"
           class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-body-alt-color u-text-default u-text-2">
@@ -59,11 +61,12 @@
       <div
         class="u-align-center u-border-1 u-border-white u-container-style u-expanded-width-xs u-group u-shape-rectangle u-group-1">
         <div class="u-container-layout u-container-layout-1">
-          <a href="https://nicepage.online"
+          <a href="http://localhost/mosque/"
             class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-hover-palette-2-light-2 u-text-white u-btn-1">Login</a>
-          <a href="https://nicepage.online"
+          <a id="myBtn"
             class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-hover-palette-2-light-2 u-text-white u-btn-2">Select
-            Location or Mosque</a><span class="u-icon u-text-white u-icon-1">
+            Location or Mosque</a>
+          <span class="u-icon u-text-white u-icon-1">
             <svg class="u-svg-link" id="playButton" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bbed"></use>
             </svg>
@@ -88,8 +91,16 @@
           </colgroup>
           <thead class="u-align-center u-custom-font u-font-merriweather tableHead u-table-header u-table-header-1">
             <tr style="height: 47px;">
-              <th class="u-border-1 u-border-black u-table-cell">Prayer</th>
-              <th class="u-border-1 u-border-black u-table-cell">Schedule</th>
+              <th class="u-border-1 u-border-black u-table-cell"><span >Prayer</span>
+                
+              
+              </th>
+              <th class="u-border-1 u-border-black u-table-cell" >
+                <span id="prayer">Schedule</span>
+                <span id="start"> Start</span>
+              <span id="adhan">Adhan</span>
+              <span id="jamat">Jamat</span>
+              </th>
             </tr>
           </thead>
           <tbody class="u-table-body u-table-valign-top" id="table-body">
@@ -142,104 +153,38 @@
         </table>
       </div>
       <!--Image SLider Div-->
-      <div
-        class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1 "
-        style="display: none;" data-interval="5000" data-u-ride="carousel" id="carousel-3baa">
-        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-          <li data-u-target="#carousel-3baa" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle"
-            style="width: 10px; height: 10px;"></li>
-          <li data-u-target="#carousel-3baa" data-u-slide-to="1" class="u-grey-70 u-shape-circle"
-            style="width: 10px; height: 10px;"></li>
-          <li data-u-target="#carousel-3baa" data-u-slide-to="2" class="u-grey-70 u-shape-circle"
-            style="width: 10px; height: 10px;"></li>
-        </ol>
-        <div class="u-carousel-inner u-gallery-inner" role="listbox">
-          <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
-            <div class="u-back-slide" data-image-width="1280" data-image-height="853">
-              <img class="u-back-image u-expanded"
-                src="images/b31ac71137f47f4f073b5c79fea8d774e711ba13de13ac8ab461033b6671d9986ab39bc6e6b8803e43b4c175ab5f537c8731fa0d3da303c8e7737a_1280.jpg">
-            </div>
-            <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
-              <h3 class="u-gallery-heading">Sample Title</h3>
-              <p class="u-gallery-text">Sample Text</p>
-            </div>
-          </div>
-          <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
-            <div class="u-back-slide" data-image-width="1280" data-image-height="826">
-              <img class="u-back-image u-expanded"
-                src="images/7c36ca5e9bb66310efb824bd2de4c1c61ff77b71c72e35693de5046839ef32aa99029b572db9038c0bdcc3fb7a8b472587c17bd4b3db55241e05f1_1280.jpg">
-            </div>
-            <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
-              <h3 class="u-gallery-heading">Sample Title</h3>
-              <p class="u-gallery-text">Sample Text</p>
-            </div>
-          </div>
-          <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="1280"
-            data-image-height="853">
-            <div class="u-back-slide">
-              <img class="u-back-image u-expanded"
-                src="images/00580ca5e7db069724bbf173241a41c1b613ef6dc8b8544d95596269382cd3dbd702a182cf9936ecab6e86a6fc0b6bb14a5c0075210a66e516180c_1280.jpg">
-            </div>
-            <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
-              <h3 class="u-gallery-heading"></h3>
-              <p class="u-gallery-text"></p>
-            </div>
-            <style data-mode="XL" data-visited="true"></style>
-            <style data-mode="LG"></style>
-            <style data-mode="MD"></style>
-            <style data-mode="SM"></style>
-            <style data-mode="XS"></style>
-          </div>
+      <div 
+        class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1 imageSlider" 
+      data-interval="5000" data-u-ride="carousel" id="carousel-3baa">
+       <!--Image Slider -->
+       <div class=" rounded-lg text-center px-10 ">
+        <div class="imgbox " id="imgSlider">
+
+            <img class="mySlides"  src="images/1.jpeg">
+            <img class="mySlides"  src="images/2.jpeg">
+            
+            
         </div>
-        <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-prev u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-carousel-control-1"
-          href="#carousel-3baa" role="button" data-u-slide="prev">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 31.494 31.494">
-              <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
-	c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
-	c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"></path>
-            </svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 31.494 31.494">
-              <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
-	c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
-	c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"></path>
-            </svg>
-          </span>
-        </a>
-        <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-next u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2"
-          href="#carousel-3baa" role="button" data-u-slide="next">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 31.49 31.49">
-              <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
-	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
-	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-            </svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 31.49 31.49">
-              <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
-	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
-	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-            </svg>
-          </span>
-        </a>
+         
+    </div>
+       <!--End Image Slider -->
+        
       </div>
       <!--Image SLider Div END-->
 
       <!--Qibla Compass-->
-      <div class=" u-shape u-shape-rectangle u-shape-1">
-        <h5 style="text-align: center;">Qibla Angle <span id="angle" style="color: rgb(251, 255, 1);">180</span>&#176;<span id="coordinate">S</span></h5>
+      <div class=" u-shape u-shape-rectangle u-shape-1" id="compassDiv" style="display: none;">
+        <h5 style="text-align: center;">Qibla Angle <span id="angle"
+            style="color: rgb(251, 255, 1);">180</span>&#176;<span id="coordinate">S</span></h5>
         <div id="compass">
           <span style="font-size:small;">N(0)</span>
           <span style="font-size:small;">E(90)</span>
           <span style="font-size:small;">S(180)</span>
           <span style="font-size:small;">W(270)</span>
-          <span >45</span>
-          <span >315</span>
-          <span >135</span>
-          <span >225</span>
+          <span>45</span>
+          <span>315</span>
+          <span>135</span>
+          <span>225</span>
           <div id="pointer"></div>
         </div>
 
@@ -247,12 +192,14 @@
       <!--Qibla Compass END-->
 
     </div>
-<!--Location Div-->
+    <!--Location Div-->
     <div
       class="u-align-center u-border-1 u-border-white u-container-style u-expanded-width-xs u-group u-radius-16 u-shape-round u-group-2">
       <div
         class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-2">
-       <div> <h4 class="u-custom-font u-font-montserrat u-text u-text-1" id="location">Dhaka, Bangladesh</h4></div>
+        <div>
+          <h4 class="u-custom-font u-font-montserrat u-text u-text-1" id="location">Dhaka, Bangladesh</h4>
+        </div>
       </div>
     </div>
     <!--END Location Div-->
@@ -264,10 +211,79 @@
     id="footer">
     <div class="u-align-left u-clearfix u-sheet u-valign-middle u-sheet-1">
       <p class="u-align-center u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-1">
-       <marquee> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque odio repellendus hic expedita ducimus repudiandae temporibus ad reiciendis ratione asperiores provident nihil nam assumenda odit, corporis ipsa nemo corrupti quibusdam et! Ullam distinctio assumenda sapiente fuga inventore, est tenetur dolore eaque accusamus dolorum sed dignissimos facilis debitis. Ipsum, id debitis.&nbsp;&nbsp;</marquee> </p>
+        <marquee id="marquee">
+          <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
+          <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
+         <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
+         <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>
+        </marquee>
+      </p>
     </div>
   </footer>
+
+  <!-- Trigger/Open The Modal -->
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Select Location or Mosque</h3>
+      <div class="select">
+        <label for="startCheck">Schedule By Location
+          <input type="checkbox" name="locatoin" id="locationCheck">
+        </label>
+
+        <label for="startCheck">Schedule By Mosques
+          <input type="checkbox" name="mosque" id="mosqueCheck">
+        </label>
+
+      </div>
+      <div class="location" id="locationDiv" style="display: none;">
+        <select name="country" id="country">
+          <option selected disabled> Country</option>
+          
+        </select>
+
+        <select name="city" id="city">
+          <option value="" selected disabled>City</option>
+        </select>
+        <div>
+          <button id="loc-sub-button" class="loc-sub-button"  >Submit</button>
+        </div>
+
+      </div>
+      <div class="mosque" id="mosqueDiv" style="display: none;">
+        <div>
+         
+
+        </div>
+       
+
+        <div>
+          <select name="country" id="countryM">
+            <option selected disabled> Country</option>
+            
+          </select>
+        </div>
+        <select name="mosque" id="mosque">
+          <option value="" selected disabled>Select Mosque</option>
+        </select>
+        <div>
+          <button class="loc-sub-button" id="mosque-sub-btn">Submit</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+  
   <script src="js/function.js"></script>
+  <script src="js/modal.js"></script>
 
 </body>
 

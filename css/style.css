@@ -138,7 +138,7 @@ td{
 }
 
 .u-section-1 .u-gallery-1 {
-  height: 338px;
+  height: 324px;
   width: 485px;
   margin: -366px 16px 0 auto;
 }
@@ -205,7 +205,7 @@ td{
 }
 
 .u-section-1 .u-text-1 {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   margin: 0;
   
 }
@@ -222,7 +222,7 @@ td{
 }
 .u-section-1 .u-shape-1 {
   width: 570px;
-  height: 279px;
+  height: 288px;
   background-image: none;
   margin: -369px 0 0 auto;
 }
@@ -410,6 +410,19 @@ on #pointer:before */
 	margin-left: -1px; margin-top: -1px;
 }
 
+img{
+  width: 100%;
+  max-height: 363px;
+  min-height: 363px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.imgbox{
+  width:100%;
+  height: 80%;
+  
+  margin-top: 2px;
+}
+
 
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
@@ -418,6 +431,7 @@ on #pointer:before */
 
   .u-section-1 .u-group-1 {
     height: auto;
+    margin: -100px auto 0;
   }
 
   .u-section-1 .u-btn-1 {
@@ -449,14 +463,25 @@ on #pointer:before */
 
   .u-section-1 .u-shape-1 {
     width: 392px;
-    height: 275px;
-    margin-top: -377px;
+    height: 280px;
+    margin-top: -340px;
+  }
+
+  img{
+    width: 100%;
+    max-height: 357px;
+    min-height: 357px;
+    
   }
 }
 
 @media (max-width: 991px) {
   .u-section-1 .u-sheet-1 {
     min-height: 845px;
+  }
+  .u-section-1 .u-group-1 {
+    height: auto;
+    margin: -60px auto 0;
   }
 
   .u-section-1 .u-container-layout-1 {
@@ -496,6 +521,12 @@ on #pointer:before */
     margin-right: auto;
     margin-bottom: initial;
   }
+  img{
+    width: 100%;
+    max-height: 370px;
+    min-height: 370px;
+    
+  }
 }
 
 @media (max-width: 767px) {
@@ -531,11 +562,19 @@ on #pointer:before */
 
   .u-section-1 .u-group-2 {
     width: 540px;
+    margin-top: 18px;
   }
 
   .u-section-1 .u-container-layout-2 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  img{
+    width: 100%;
+    max-height: 370px;
+    min-height: 330px;
+    
   }
 }
 
@@ -549,6 +588,7 @@ on #pointer:before */
     margin-right: initial;
     margin-left: initial;
     width: auto;
+    margin: -80px auto 0;
   }
 
   .u-section-1 .u-btn-1 {
@@ -609,7 +649,7 @@ on #pointer:before */
   }
 
   .u-section-1 .u-group-2 {
-    margin-top: 0px;
+    margin-top: -50px;
     margin-bottom: 9px;
     min-height: 47px;
     margin-right: initial;

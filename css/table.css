@@ -1,0 +1,28 @@
+
+
+#start, #jamat, #adhan{
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   margin-left: 30px;
+}
+#start:hover{
+   color: chartreuse;
+    cursor: pointer;
+}
+#adhan:hover{
+   color: chartreuse;
+    cursor: pointer;
+}
+#jamat:hover{
+   color: chartreuse;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 767px){
+    #start, #jamat, #adhan{
+         margin-left: 10px;
+    }
+
+}

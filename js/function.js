@@ -1,9 +1,20 @@
-// Get Current User City
-$.getJSON("http://www.geoplugin.net/json.gp?jsoncallback=?",
-    function (data) {
-        getCity(data);
-    }
-);
+
+// Get Country City
+$.getJSON('https://api.ipify.org?format=json', function(data){
+    
+
+    
+$.getJSON('https://admin.prayerdisplay.com/api/getLocation?ip='+data.ip,function(json){
+    getCity(json);
+
+})
+
+});
+$('#start').hide();
+$('#adhan').hide();
+$('#jamat').hide();
+ 
+
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -43,14 +54,33 @@ playButton.addEventListener('click',function(){
     
 });
 
+$('#compassDiv').show();
+$('.imageSlider').hide();
+
+
+//Image Slider
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) { slideIndex = 1 }
+  x[slideIndex - 1].style.display = "block";
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
 
 
 
 
 function getCity(data)
 {
-   let city = data.geoplugin_city;
-   let country = data.geoplugin_countryName;
+   let city = data.cityName;
+   let country = data.countryName;
    locationText.innerText = city +', '+ country;
    let today = new Date();
    
@@ -127,7 +157,7 @@ function saveToArray(json){
     .then(json => getQiblaDirection(json));
     
 }
-
+// 24h to 12h 
 function tConvert (time) {
     // Check correct time format and split into components
     time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
@@ -143,13 +173,13 @@ function tConvert (time) {
       let direction = parseInt(data.data.direction);
       let compassDirecton = direction;
       coordinate.innerText = compassPosition(direction);
-      if(compassPosition(direction)=='NW') compassDirecton = compassDirecton-45;
-      else if(compassPosition(direction)=='E') compassDirecton = compassDirecton-90;
-      else if(compassPosition(direction)=='SE') compassDirecton = compassDirecton-135;
-      else if(compassPosition(direction)=='S') compassDirecton = compassDirecton-180;
-      else if(compassPosition(direction)=='SW') compassDirecton = compassDirecton-225;
-      else if(compassPosition(direction)=='W') compassDirecton = compassDirecton-270;
-      else if(compassPosition(direction)=='NW') compassDirecton = compassDirecton-315;
+      if(compassPosition(direction)=='NE') compassDirecton = (compassDirecton-45);
+      else if(compassPosition(direction)=='E') compassDirecton = (compassDirecton-90);
+      else if(compassPosition(direction)=='SE') compassDirecton = (compassDirecton-135);
+      else if(compassPosition(direction)=='S') compassDirecton = (compassDirecton-180);
+      else if(compassPosition(direction)=='SW') compassDirecton =(compassDirecton-225);
+      else if(compassPosition(direction)=='W') compassDirecton = (compassDirecton-270);
+      else if(compassPosition(direction)=='NW') compassDirecton = (compassDirecton-315);
       else compassDirecton = compassDirecton;
       angle.innerText = compassDirecton;
       
@@ -291,6 +321,9 @@ function compassPosition(angle){
     return coordinate;
 
 }
+
+
+
 
 
 
