@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Prayer Time Display</title>
+    
+
+   
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/custome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="display04">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body >
+    <header>
+      
+     <div class="container">
+       <div class="row justify-content-center gx-0">
+         <div class="col-lg-1 col-md-1 col-xl-1 col-sm-2 first">
+          <div class="main" >
+            <i class="fa fa-play-circle" id="playButton"></i>
+            <h4 id="main">Main</h4>
+          </div>
+         </div>
+
+         <div class="col-lg-8 col-md-8 col-xl-8 col-sm-7 second">
+           <div class="clock">
+             <span id="time">11:12:33 AM</span>
+           </div>
+         </div>
+         <div class="col-lg-3 col-md-3 col-xl-3 col-sm-3 third">
+          <div class="dates">
+            <h4 id="dateBottom">
+              Monday, March 14, 2022 
+             </h4>
+             <h5 id="hijriDate">
+              14 Ramadan 1496 Hijri 
+             </h5>
+          </div>
+
+         </div>
+       </div>
+     </div>
+    </header>
+    <section  id="sec-11e4">
+      <div class="table_div">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 col-xl-8 col-sm-12">
+              <div class="table-responsive">
+                <table class="table  table-bordered  align-middle">
+                  <thead>
+                    <tr>
+                      <th>Prayer</th>
+                      <th class="start">Start</th>
+                      <th class="adhan">Adhan</th>
+                      <th class="jamat">Jamat</th>
+                    </tr>
+  
+                  </thead>
+  
+                  <tbody>
+                    <tr>
+                      <td>Fajr</td>
+                      <td id="fajr"  class="start">04:29 AM</td>
+                      <td id="fajr_adhan"  class="adhan">04:29 AM</td>
+                      <td id="fajr_jamat" class="jamat">04:29 AM</td>
+  
+                    </tr>
+  
+                    <tr>
+                      <td>Dhuhr</td>
+                      <td id="dhuhr" class="start">12:29 PM</td>
+                      <td id="dhuhr_adhan" class="adhan">12:29 PM</td>
+                      <td id="dhuhr_jamat" class="jamat">12:29 PM</td>
+  
+                    </tr>
+  
+                     <tr>
+                      <td>Asr</td>
+                      <td id="asr" class="start">04:29 PM</td>
+                      <td id="asr_adhan" class="adhan">04:29 PM</td>
+                      <td id="asr_jamat" class="jamat">04:29 PM</td>
+  
+                    </tr>
+  
+                    <tr>
+                      <td>Maghrib</td>
+                      <td id="maghrib" class="start">06:29 PM</td>
+                      <td id="maghrib_adhan" class="adhan">06:29 PM</td>
+                      <td id="maghrib_jamat" class="jamat">06:29 PM</td>
+  
+                    </tr>
+  
+                    <tr>
+                      <td>Isha</td>
+                      <td id="isha" class="start">08:29 PM</td>
+                      <td id="isha_adhan" class="adhan">08:29 PM</td>
+                      <td id="isha_jamat" class="jamat">08:29 PM</td>
+  
+                    </tr>
+
+                    <tr>
+                      <td>Jumu'ah</td>
+                      <td  class="start"></td>
+                      <td id="jummah_adhan" class="adhan">08:29 PM</td>
+                      <td id="jummah_jamat" class="jamat">08:29 PM</td>
+  
+                    </tr>
+
+                    <tr style="display: none;" id="mul_row-1">
+                      <td>Jumu'ah 2</td>
+                      <td  id="start1" class="start"></td>
+                      <td id="jummah_adhan1" class="adhan"></td>
+                      <td id="jummah_jamat1" class="jamat"></td>
+  
+                    </tr>
+
+                    <tr id="mul_row-2" style="display: none;">
+                      <td>Jumu'ah 3</td>
+                      <td  id="start2" class="start"></td>
+                      <td id="jummah_adhan2" class="adhan"></td>
+                      <td id="jummah_jamat2" class="jamat"></td>
+  
+                    </tr>
+  
+                    
+  
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-xl-4 col-sm-12">
+                <!--Image Slider -->
+      
+        <div class="imgbox " id="imgSlider">
+
+            <img class="mySlides" id="slider"  src="../images/1.jpeg">
+            <img class="mySlides" id="slider"  src="../images/2.jpeg">
+            
+            
+        </div>
+         
+    
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="location_div">
+        <h4 id="location">Dhaka, Bangladesh</h4>
+
+      </div>
+    </section>
+    
+    
+    
+    <footer >
+      <div class="text">
+        <marquee id="marquee">
+          <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
+          <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
+         <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
+         <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>
+        </marquee>
+
+      </div>
+      
+    </footer>
+
+     
+  <script src="select.js"></script> 
+  </body>
+</html>

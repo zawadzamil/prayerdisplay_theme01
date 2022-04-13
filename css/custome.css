@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Noto Sans");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+header {
+  color: white !important;
+  height: 12rem;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14%, rgba(0, 0, 0, 0.950018)), color-stop(53%, #ba0000), color-stop(86%, rgba(0, 0, 0, 0.944415)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.950018) 14%, #ba0000 53%, rgba(0, 0, 0, 0.944415) 86%);
+}
+
+header .container {
+  margin-top: 0% !important;
+}
+
+header .container .row #time {
+  font-size: 11vw;
+  font-weight: bold;
+  font-family: Bahnschrift;
+  text-align: center;
+}
+
+header .container .row .dates {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+body {
+  position: relative;
+  background: url(../images/Sunset_mosque.jpg) !important;
+  background-repeat: no-repeat;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sec-11e4 {
+  background-image: url(../images/Sunset_mosque.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center fixed;
+  background-size: cover;
+}
+
+#sec-11e4 .nav {
+  margin-top: 0.5rem !important;
+  height: 100%;
+  text-align: center;
+  word-spacing: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 0.8rem;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin: auto;
+  border: 0.12em solid rgba(245, 245, 245, 0.493);
+  background-color: rgba(0, 0, 0, 0.602);
+  border-radius: 0.8rem;
+}
+
+#sec-11e4 .nav .area {
+  font-size: 0.9rem;
+}
+
+#sec-11e4 .nav .area a {
+  color: azure;
+  cursor: pointer;
+  padding: 0 1rem 0 1rem;
+  vertical-align: middle;
+}
+
+#sec-11e4 .nav .area i {
+  padding: 0 1rem 0 1rem;
+  cursor: pointer;
+  vertical-align: middle;
+  color: aliceblue;
+}
+
+#sec-11e4 .table_div {
+  margin-top: 1rem;
+  height: 100%;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+#sec-11e4 .table_div .table {
+  background-color: rgba(0, 0, 0, 0.822);
+  text-align: center;
+  color: #ffee00;
+}
+
+#sec-11e4 .table_div .table th {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#sec-11e4 .table_div .table tbody {
+  font-size: 1.8rem;
+  font-family: "Noto Sans";
+  font-weight: bold;
+}
+
+#sec-11e4 .location_div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin: auto;
+  text-align: center;
+  height: 3rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#sec-11e4 .location_div h4 {
+  padding: 0 2rem 1rem 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+footer {
+  vertical-align: bottom;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background: #ba0000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ba0000), color-stop(28%, #340101), color-stop(69%, black));
+  background: linear-gradient(180deg, #ba0000 3%, #340101 28%, black 69%);
+}
+
+footer .text {
+  width: 95%;
+  font-family: Merriweather;
+}
+
+footer .text marquee {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 1500px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .container {
+    margin: 0% !important;
+    width: 100% !important;
+  }
+  header #time {
+    font-weight: 7vw !important;
+  }
+  header .dates h4 {
+    font-size: 2vw;
+  }
+  header .dates h5 {
+    font-size: 1.5vw;
+  }
+  #sec-11e4 .nav .area a {
+    font-size: 1.5vw;
+  }
+  #sec-11e4 .nav .area i {
+    font-size: 1vw;
+  }
+  #sec-11e4 .container {
+    margin: 5% !important;
+    width: 100% !important;
+  }
+  #sec-11e4 .row {
+    width: 100% !important;
+  }
+  #sec-11e4 .row #compassDiv h5 {
+    font-size: 1.5vw !important;
+  }
+  #sec-11e4 .table {
+    width: 100%;
+  }
+  #sec-11e4 .table th {
+    font-size: 2vw !important;
+  }
+  #sec-11e4 .table td {
+    font-size: 1.8vw !important;
+    padding-left: 1vw !important;
+  }
+  #sec-11e4 .location_div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sec-11e4 .location_div h4 {
+    font-size: 2vw !important;
+  }
+}
+/*# sourceMappingURL=custome.css.map */

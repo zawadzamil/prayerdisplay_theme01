@@ -24,7 +24,7 @@ let yyyy = today.getFullYear();
 
 // Getting All Time Fields
 const fajr = document.getElementById('fajr');
-const dhhr = document.getElementById('dhhr');
+const dhuhr = document.getElementById('dhuhr');
 const asr = document.getElementById('asr');
 const maghrib = document.getElementById('maghrib');
 const isha = document.getElementById('isha');
@@ -43,12 +43,12 @@ let clicked = false;
 playButton.addEventListener('click',function(){
     if(!clicked)
     {
-        playButton.style.backgroundColor = 'red';
+        playButton.style.color = 'lightgreen';
         alert('Adhan Autoplay Enabled')
         clicked = true;
     }
     else{
-        playButton.style.backgroundColor = 'inherit';
+        playButton.style.color = 'inherit';
         clicked = false;
         alert('Adhan Autoplay Disabled')
     }
@@ -174,17 +174,19 @@ function tConvert (time) {
       let direction = parseInt(data.data.direction);
       let compassDirecton = direction;
       coordinate.innerText = compassPosition(direction);
-      if(compassPosition(direction)=='NE') compassDirecton = (compassDirecton-45);
-      else if(compassPosition(direction)=='E') compassDirecton = (compassDirecton-90);
-      else if(compassPosition(direction)=='SE') compassDirecton = (compassDirecton-135);
-      else if(compassPosition(direction)=='S') compassDirecton = (compassDirecton-180);
-      else if(compassPosition(direction)=='SW') compassDirecton =(compassDirecton-225);
-      else if(compassPosition(direction)=='W') compassDirecton = (compassDirecton-270);
-      else if(compassPosition(direction)=='NW') compassDirecton = (compassDirecton-315);
+      if(compassPosition(direction)=='EN') compassDirecton = (90-compassDirecton);
+      else if(compassPosition(direction)=='ES') compassDirecton = (compassDirecton-90);
+      else if(compassPosition(direction)=='SE') compassDirecton = (180-compassDirecton);
+      else if(compassPosition(direction)=='SW') compassDirecton = (compassDirecton-180);
+      else if(compassPosition(direction)=='WS') compassDirecton =(270-compassDirecton);
+      else if(compassPosition(direction)=='WN') compassDirecton = (compassDirecton-270);
+      else if(compassPosition(direction)=='NW') compassDirecton = (360-compassDirecton);
       else compassDirecton = compassDirecton;
       angle.innerText = compassDirecton;
       
+      
       let offset;
+     
       if(direction >90){
           direction = direction-90;
          offset = direction ; 
@@ -194,9 +196,9 @@ function tConvert (time) {
           offset = direction ;
       }
       document.documentElement.style
-      .setProperty('--degreeFrom', direction+'deg');
+      .setProperty('--degreeFrom', direction-12+'deg');
       document.documentElement.style
-      .setProperty('--degreeTo', offset+'deg');
+      .setProperty('--degreeTo', offset-12+'deg');
       
 
       //Finding Compass Direction
@@ -292,32 +294,30 @@ function play(){
 // Compass Position Function (N,NE,SW,SE etc)
 function compassPosition(angle){
     let coordinate = "SW";
-    if(angle>=0 && angle < 30){
-        coordinate = "N";
-    }
-    else if(angle>=30 && angle<=60){
+    if(angle>=0 && angle <= 45){
         coordinate = "NE";
     }
-    else if(angle>60 && angle<120 ){
-        coordinate = "E";
+    else if(angle>45 && angle<=90){
+        coordinate = "EN";
     }
-    else if(angle>=120 && angle<=150 ){
+    else if(angle>90 && angle<=135 ){
+        coordinate = "ES";
+    }
+    else if(angle>135 && angle<=180 ){
         coordinate = "SE";
     }
-    else if(angle>150 && angle<210 ){
-        coordinate = "S";
-    }
-    else if(angle>=210 && angle<=240 ){
+    else if(angle>180 && angle<=225 ){
         coordinate = "SW";
     }
-    else if(angle>240 && angle<300 ){
-        coordinate = "W";
+    else if(angle>225 && angle<=270 ){
+        coordinate = "WS";
     }
-    else if(angle>=300 && angle<=330 ){
-        coordinate = "NW";
+    else if(angle>270 && angle<=315 ){
+        coordinate = "WN";
     }
+    
     else{
-        coordinate = "N";
+        coordinate = "NW";
     }
     return coordinate;
 

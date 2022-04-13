@@ -180,3 +180,69 @@ label {
     cursor: pointer;
 }
 
+
+
+@media (max-width: 991px) {
+    .modal-content{
+        margin-top:25%;
+    }
+    .location, .mosque{
+        width: 95%;
+    }
+    #mosque{
+        margin-top: 15px;
+        width: 88%;
+    }
+    .modal-content{
+        height: 450px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    #city {
+      
+        width: 15rem;
+      
+    
+    
+    }
+    .select{
+        width: 95%;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin: auto;
+    }
+   
+    .location, .mosque{
+        width: 95%;
+    }
+    .select{
+        width: 84%;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin: auto;
+    }
+    #mosque{
+        margin-top: 10px;
+        width: 88%;
+    }
+    .modal-content{
+        height: 450px;
+    }
+    
+
+}
+@media (max-width: 534px){
+    .select{
+        width: 97%;
+    }
+    #city{
+        width: 14rem;
+    }
+    .modal-content{
+        height: 500px;
+    }
+
+}
+

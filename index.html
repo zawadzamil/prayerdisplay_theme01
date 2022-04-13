@@ -8,155 +8,144 @@
   <meta name="description" content="">
   <meta name="page_type" content="np-template-header-footer-from-plugin">
   <title>Prayer Time Display</title>
-  <link rel="stylesheet" href="css/template.css" media="screen">
+  
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" href="css/modal.css" media="screen">
-  <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+
   <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-<link rel="stylesheet" href="css/table.css" media="screen">
+  <link rel="stylesheet" href="css/table.css" media="screen">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="css/custome.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-  <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="display03">
-  <meta property="og:description" content="">
-  <meta property="og:type" content="website">
+
+
+ 
 </head>
 
-<body class="u-body">
-
-
-  <!--Header Start-->
-  <header
-    class="u-clearfix  u-header u-valign-middle-lg gradient u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-header"
-    id="sec-df80">
-    <div class="u-container-style u-expanded-width  u-group u-shape-rectangle u-group-1">
-      <div class="u-container-layout u-container-layout-1" id="headerSection">
-        <h1
-          class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default u-text-white u-text-1"
-          id="time">
-          11:54:59</h1>
-        <h4 id="dateBottom"
-          class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-body-alt-color u-text-default u-text-2">
-          Monday, March 14, 2022 </h4>
-        <h4 id="hijriDate"
-          class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-body-alt-color u-text-default u-text-3">
-          Al Thalaata,27 Rajab , 1443 </h4>
+<body >
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-xl-9 col-sm-12" >
+          <h1 id="time">00:00:00 PM</h1>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 " >
+         <div class="dates">
+          <h4 id="dateBottom" > -----,--,----</h4>
+          <h5 id="hijriDate"> -----,-- -----,------ </h5>
+         </div>
+        </div>
       </div>
     </div>
   </header>
-  <!--Header End-->
+
+
+
 
 
   <section class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-image u-shading u-section-1"
-    id="sec-11e4" data-image-width="1600" data-image-height="1065">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <div
-        class="u-align-center u-border-1 u-border-white u-container-style u-expanded-width-xs u-group u-shape-rectangle u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-          <a href="http://localhost/mosque/"
-            class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-hover-palette-2-light-2 u-text-white u-btn-1">Login</a>
-          <a id="myBtn"
-            class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-hover-palette-2-light-2 u-text-white u-btn-2">Select
-            Location or Mosque</a>
-          <span class="u-icon u-text-white u-icon-1">
-            <svg class="u-svg-link" id="playButton" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bbed"></use>
-            </svg>
-            <svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-bbed"
-              style="enable-background:new 0 0 60 60;">
-              <g>
-                <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
-		c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
-		C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"></path>
-                <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-		S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"></path>
-              </g>
-            </svg>
-          </span>
-        </div>
+    id="sec-11e4">
+    <div class="nav">
+      <div class="area">
+        <a href="https://admin.prayerdisplay.com/">Login/Register</a>
+        <a id="myBtn">Select_Location/Mosque</a>
+        <i class="fa fa-play-circle" id="playButton"></i>
+
       </div>
-      <div class="u-expanded-width-xs u-table u-table-responsive u-table-1">
-        <table class="u-table-entity">
-          <colgroup>
-            <col width="50%">
-            <col width="50%">
-          </colgroup>
-          <thead class="u-align-center u-custom-font u-font-merriweather tableHead u-table-header u-table-header-1">
-            <tr style="height: 47px;">
-              <th class="u-border-1 u-border-black u-table-cell"><span >Prayer</span>
-                
-              
-              </th>
-              <th class="u-border-1 u-border-black u-table-cell" >
-                <span id="prayer">Schedule</span>
-                <span id="start"> Start</span>
-              <span id="adhan">Adhan</span>
-              <span id="jamat">Jamat</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="u-table-body u-table-valign-top" id="table-body">
-            <tr style="height: 65px;">
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-first-column u-font-pt-sans u-table-cell u-table-valign-top  u-table-cell-3">
-                Fajr</td>
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-font-courier-new u-table-cell u-table-valign-top  u-table-cell-4"
-                id="fajr">
-                06:10 AM</td>
-            </tr>
-            <tr style="height: 65px;">
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-first-column u-font-pt-sans u-table-cell u-table-valign-top u-table-cell-5">
-                Dhuhr</td>
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-font-courier-new u-table-cell u-table-valign-top  u-table-cell-6"
-                id="dhuhr">
-                12:30 PM</td>
-            </tr>
-            <tr style="height: 65px;">
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-first-column u-font-pt-sans u-table-cell u-table-valign-top  u-table-cell-7">
-                Asr</td>
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-font-courier-new u-table-cell u-table-valign-top u-table-cell-8"
-                id="asr">
-                04:45 PM</td>
-            </tr>
-            <tr style="height: 65px;">
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-first-column u-font-pt-sans u-table-cell u-table-valign-top  u-table-cell-9">
-                Maghrib</td>
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-font-courier-new u-table-cell u-table-valign-top  u-table-cell-10"
-                id="maghrib">
-                06:15 PM</td>
-            </tr>
-            <tr style="height: 65px;">
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-first-column u-font-pt-sans u-table-cell u-table-valign-top  u-table-cell-11">
-                Isha</td>
-              <td
-                class="u-align-center u-border-1 u-border-black u-custom-font u-font-courier-new u-table-cell u-table-valign-top  u-table-cell-12"
-                id="isha">
-                07:45 PM</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!--Image SLider Div-->
-      <div 
-        class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1 imageSlider" 
-      data-interval="5000" data-u-ride="carousel" id="carousel-3baa">
-       <!--Image Slider -->
+    </div>
+
+    <div class="table_div">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-xl-8">
+            <div class="table-responsive">
+              <table class="table  table-bordered  align-middle">
+                <thead>
+                  <tr>
+                    <th>Prayer</th>
+                    <th>
+                      <span id="prayer">Schedule</span>
+                      <span id="start"> Start</span>
+                      <span id="adhan">Adhan</span>
+                      <span id="jamat">Jamat</span>
+                    </th>
+                  </tr>
+
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Fajr</td>
+                    <td id="fajr">04:29 AM</td>
+
+                  </tr>
+
+                  <tr>
+                    <td>Dhuhr</td>
+                    <td id="dhuhr">12:29 PM</td>
+
+                  </tr>
+
+                   <tr>
+                    <td>Asr</td>
+                    <td id="asr">04:29 PM</td>
+
+                  </tr>
+
+                  <tr>
+                    <td>Maghrib</td>
+                    <td id="maghrib">06:29 PM</td>
+
+                  </tr>
+
+                  <tr>
+                    <td>Isha</td>
+                    <td id="isha">08:29 PM</td>
+
+                  </tr>
+
+                  
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xl-4">
+            <div  id="compassDiv" >
+              <h5 style="text-align: center;">Qibla Angle <span id="angle"
+                style="color: rgb(251, 255, 1);">180</span>&#176;<span id="coordinate">S</span></h5>
+            <div id="compass">
+              <span style="font-size:small;">N(0)</span>
+              <span style="font-size:small;">E(90)</span>
+              <span style="font-size:small;">S(180)</span>
+              <span style="font-size:small;">W(270)</span>
+              <span>45</span>
+              <span>315</span>
+              <span>135</span>
+              <span>225</span>
+              <div id="pointer"></div>
+            </div>
+            </div>
+            <div class="slider" style="display: none;">
+               <!--Image Slider -->
        <div class=" rounded-lg text-center px-10 ">
         <div class="imgbox " id="imgSlider">
 
@@ -168,59 +157,41 @@
          
     </div>
        <!--End Image Slider -->
-        
-      </div>
-      <!--Image SLider Div END-->
 
-      <!--Qibla Compass-->
-      <div class=" u-shape u-shape-rectangle u-shape-1" id="compassDiv" style="display: none;">
-        <h5 style="text-align: center;">Qibla Angle <span id="angle"
-            style="color: rgb(251, 255, 1);">180</span>&#176;<span id="coordinate">S</span></h5>
-        <div id="compass">
-          <span style="font-size:small;">N(0)</span>
-          <span style="font-size:small;">E(90)</span>
-          <span style="font-size:small;">S(180)</span>
-          <span style="font-size:small;">W(270)</span>
-          <span>45</span>
-          <span>315</span>
-          <span>135</span>
-          <span>225</span>
-          <div id="pointer"></div>
+            </div>
+          </div>
+
         </div>
 
       </div>
-      <!--Qibla Compass END-->
-
     </div>
+
     <!--Location Div-->
-    <div
-      class="u-align-center u-border-1 u-border-white u-container-style u-expanded-width-xs u-group u-radius-16 u-shape-round u-group-2">
-      <div
-        class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-2">
-        <div>
-          <h4 class="u-custom-font u-font-montserrat u-text u-text-1" id="location">Dhaka, Bangladesh</h4>
-        </div>
-      </div>
+    <div class="location_div">
+      <h4 id="location">Dhaka, Bangladesh</h4>
+
+
     </div>
+    
     <!--END Location Div-->
     </div>
   </section>
 
 
-  <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-gradient u-footer"
-    id="footer">
-    <div class="u-align-left u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <p class="u-align-center u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-1">
-        <marquee id="marquee">
-          <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
-          <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
-         <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
-         <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>
-        </marquee>
+  <footer id="footer">
+    <div class="text">
+      <marquee id="marquee">
+      
+        <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
+        <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah.
+          Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
+        <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
+        <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>
+      </marquee>
         
-        
-      </p>
     </div>
+    
+
   </footer>
 
   <!-- Trigger/Open The Modal -->
@@ -246,28 +217,28 @@
       <div class="location" id="locationDiv" style="display: none;">
         <select name="country" id="country">
           <option selected disabled> Country</option>
-          
+
         </select>
 
         <select name="city" id="city">
           <option value="" selected disabled>City</option>
         </select>
         <div>
-          <button id="loc-sub-button" class="loc-sub-button"  >Submit</button>
+          <button id="loc-sub-button" class="loc-sub-button">Submit</button>
         </div>
 
       </div>
       <div class="mosque" id="mosqueDiv" style="display: none;">
         <div>
-         
+
 
         </div>
-       
+
 
         <div>
           <select name="country" id="countryM">
             <option selected disabled> Country</option>
-            
+
           </select>
         </div>
         <select name="mosque" id="mosque">
@@ -283,7 +254,7 @@
     </div>
 
   </div>
-  
+
   <script src="js/function.js"></script>
   <script src="js/modal.js"></script>
 

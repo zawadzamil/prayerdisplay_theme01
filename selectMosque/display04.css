@@ -1,0 +1,439 @@
+:root{
+  --tmlPC: 0px;
+  --tmlmob: auto;
+  --tmlLand: 0px;
+  
+}
+
+
+.u-section-1 .u-sheet-1 {
+  min-height: 509px;
+}
+
+.u-section-1 .u-table-1 {
+  width: 658px;
+  margin: 10px auto 0 var(--tmlPC);
+}
+
+.u-block-8d3f-4 {
+  font-size: 1.875rem;
+}
+
+.u-section-1 .u-table-header-1 {
+  background-image: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  
+ 
+}
+
+.u-section-1 .u-table-body-1 {
+  font-size: 1rem;
+}
+
+.u-section-1 .u-table-cell-5 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.u-section-1 .u-table-cell-6 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-7 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-8 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-9 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.u-section-1 .u-table-cell-10 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-11 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-12 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-13 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.u-section-1 .u-table-cell-14 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-15 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-16 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-17 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.u-section-1 .u-table-cell-18 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-19 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-20 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-21 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.u-section-1 .u-table-cell-22 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-23 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-24 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-25 {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+
+.u-section-1 .u-table-cell-26 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.u-section-1 .u-table-cell-x {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-27 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-table-cell-28 {
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.u-section-1 .u-group-1 {
+  width: 459px;
+  background-image: none;
+  min-height: 392px;
+  height: auto;
+  margin: -364px 0 0 auto;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0 30px;
+}
+
+.u-section-1 .u-group-2 {
+  width: 700px;
+  background-image: none;
+  min-height: 48px;
+  height: auto;
+  margin: -20px auto 0;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 1.875rem;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 665px;
+  }
+
+  .u-section-1 .u-table-1 {
+    width: 515px;
+    margin-top: 24px;
+  }
+
+  .u-section-1 .u-group-1 {
+    width: 401px;
+    min-height: 440px;
+    margin-top: -521px;
+    height: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 90px;
+    margin-bottom: 11px;
+    height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 1036px;
+  }
+
+  .u-section-1 .u-table-1 {
+    width: 683px;
+    margin-top: 25px;
+    margin-left: var(--tmlPC);
+  }
+
+  .u-section-1 .u-group-1 {
+    width: 522px;
+    margin-top: 33px;
+    margin-right: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 49px;
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 777px;
+  }
+
+  .u-section-1 .u-table-1 {
+    width: 540px;
+    margin-left: var(--tmlLand);
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 540px;
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 951px;
+  }
+
+  .u-section-1 .u-table-1 {
+    width: 329px;
+    margin-top: 33px;
+    margin-left: var(--tmlmob);
+    margin-right: auto;
+  }
+
+  .u-block-8d3f-4 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-header-1 {
+    font-size: 0.75rem;
+  }
+
+  .u-section-1 .u-table-cell-5 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-6 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-7 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-8 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-9 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-cell-10 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-11 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-12 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-13 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-cell-14 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-15 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-16 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-17 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-cell-18 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-19 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-20 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-21 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-cell-22 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-23 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-24 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-25 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-table-cell-26 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-27 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-table-cell-28 {
+    font-size: 1rem;
+    line-height: 0.8;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 21px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 55px;
+    margin-bottom: 46px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: 8px;
+    font-size: 1.rem;
+  }
+}
