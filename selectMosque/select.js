@@ -8,6 +8,7 @@ const mosqueId = urlParams.get('id')
 
 
 
+
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -24,11 +25,13 @@ playButton.addEventListener('click', function () {
         playButton.style.color = 'red';
         alert('Adhan Autoplay Enabled')
         clicked = true;
+        $('#autoPlay').text('AdhanPlay(On)');
     }
     else {
         playButton.style.color = 'inherit';
         clicked = false;
-        alert('Adhan Autoplay Disabled')
+        alert('Adhan Autoplay Disabled');
+        $('#autoPlay').text('AdhanPlay(Off)');
     }
 
 });
@@ -60,24 +63,32 @@ $.ajax({
 
 
 
-            $('#marquee').empty();
-            $('#imgSlider').empty();
+           
+            // $('#imgSlider').empty();
+            $('.slideshow-container').empty();
 
 
             notices.forEach(element => {
+                let noticeCounter = 0;
+                $('.slideshow-container').append('<div class="mySlides"> <q>'+ element.notice+'</q> </div>')
 
-                $('#marquee').append("<span> **" + element.notice + "** </span>");
-
-            });
-            photos.forEach(element => {
-
-                $('#imgSlider').append('<img class="mySlides"  src="https://admin.prayerdisplay.com/public/images/' + element.photo + '">');
+                
 
             });
+            // photos.forEach(element => {
+                
+
+            //     $('#imgSlider').append('<img class="mySlides"  src="https://admin.prayerdisplay.com/public/images/' + element.photo + '">');
+
+            // });
             $('#location').text(res.mosque_name);
+            $('#address').text(res.address);
+            $('#logoImage').attr("src","http://admin.prayerdisplay.com/public/images/"+res.logo);
             const city = res.city;
             const country = res.country;
-            fetch('https://api.aladhan.com/v1/calendarByCity?city=' + city + '&country=' + country + '&method=1&month=' + mm + '&year=' + yyyy + ' ')
+            const method = res.method;
+            
+            fetch('https://api.aladhan.com/v1/calendarByCity?city=' + city + '&country=' + country + '&method='+ method +'&month=' + mm + '&year=' + yyyy + ' ')
                 .then(response => response.json())
                 .then(json => saveToArray(json));
 
@@ -85,7 +96,8 @@ $.ajax({
             const jamat = res.jamat;
             if (res.schedule.start == 0) {
                 $('.start').each(function (i, obj) {
-                    obj.style.display = 'none'
+                    obj.style.display = 'none';
+                    $('#sunRow').hide();
                 });
                 i=i-1;
             }
@@ -214,6 +226,8 @@ $.ajax({
 });
 
 
+
+
 function saveToArray(json) {
     const data = json.data;
     data.forEach(element => {
@@ -223,6 +237,7 @@ function saveToArray(json) {
         let Maghrib = timings.Maghrib.replace(/ *\([^)]*\) */g, "");
         let Isha = timings.Isha.replace(/ *\([^)]*\) */g, "");
         let Asr = timings.Asr.replace(/ *\([^)]*\) */g, "");
+        let Sunrise = timings.Sunrise.replace(/ *\([^)]*\) */g, "");
 
         const date = element.date;
         //Getting Hijri date from API
@@ -237,6 +252,7 @@ function saveToArray(json) {
         Asr = tConvert(Asr);
         Maghrib = tConvert(Maghrib);
         Isha = tConvert(Isha);
+        Sunrise = tConvert(Sunrise);
 
 
         ///////////////////////
@@ -248,6 +264,7 @@ function saveToArray(json) {
         //If day is today
         if (dd == day && mm == month && yyyy == year) {
             fajr.innerText = Fajr;
+            $('#sun').text(Sunrise);
             dhuhr.innerText = Dhuhr;
             asr.innerText = Asr;
             maghrib.innerText = Maghrib;
@@ -261,21 +278,39 @@ function saveToArray(json) {
 
 
 
-//Image Slider
-var slideIndex = 0;
-carousel();
+// //Image Slider
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) { slideIndex = 1 }
-    x[slideIndex - 1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 3 seconds
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  
+}
+window.onload= function () {
+ setInterval(function(){ 
+     plusSlides(1);
+ }, 8000);
+ }
+
 
 
 // 24h to 12h 
@@ -303,6 +338,12 @@ setInterval(() => {
 }, 1000);
 
 setInterval( ()=>{
+     // If date changes, Reload the page.
+     const dateNow = new Date();
+     let dayNow =dateNow.getDate().toString();
+     if(dayNow != date){
+         location.reload();
+     }
     $.ajax({
         url: 'https://admin.prayerdisplay.com/api/getMosqueSchedule?mosque_id=' + mosqueId,
         type: 'get',
@@ -372,3 +413,9 @@ function play() {
     music.play();
 
 }
+
+$(document).ready(function(){
+    var loading = $(".loading");
+    loading.delay(8000).slideUp();
+  });
+

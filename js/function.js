@@ -5,17 +5,28 @@ $.getJSON('https://api.ipify.org?format=json', function(data){
 
     
 $.getJSON('https://admin.prayerdisplay.com/api/getLocation?ip='+data.ip,function(json){
-    getCity(json);
+    getCity(json,1);
 
 })
 
 });
+let now = 0;
 $('#start').hide();
 $('#adhan').hide();
-$('#jamat').hide();
+$('#jamat').hide(); 
 
- 
+let isFull = false;
+function fullscreen(){
+    if(!isFull){
+        document.documentElement.requestFullscreen();
+        isFull = true;
+    }
+    else{
+        document.exitFullscreen();
+        isFull = false;
+    }
 
+}
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -46,11 +57,13 @@ playButton.addEventListener('click',function(){
         playButton.style.color = 'lightgreen';
         alert('Adhan Autoplay Enabled')
         clicked = true;
+        $('#autoplayText').text('(Adhan On)')
     }
     else{
-        playButton.style.color = 'inherit';
+        playButton.style.color = 'white';
         clicked = false;
-        alert('Adhan Autoplay Disabled')
+        alert('Adhan Autoplay Disabled');
+        $('#autoplayText').text('(Adhan Off)')
     }
     
 });
@@ -78,7 +91,7 @@ function carousel() {
 
 
 
-function getCity(data)
+function getCity(data,method)
 {
    let city = data.cityName;
    let country = data.countryName;
@@ -87,7 +100,7 @@ function getCity(data)
    
 
 
-   fetch('https://api.aladhan.com/v1/calendarByCity?city='+city+'&country='+country+'&method=1&month='+mm+'&year='+yyyy+' ')
+   fetch('https://api.aladhan.com/v1/calendarByCity?city='+city+'&country='+country+'&method='+method+'&month='+mm+'&year='+yyyy+' ')
    .then(response => response.json())
    .then(json =>saveToArray(json));
  
@@ -99,6 +112,7 @@ function saveToArray(json){
     const data = json.data;
     let latitude;
     let longitude ;
+    console.log(data);
    
     
     data.forEach(element => {
@@ -108,8 +122,7 @@ function saveToArray(json){
         let Dhuhr = timings.Dhuhr.replace(/ *\([^)]*\) */g, "");
         let Maghrib = timings.Maghrib.replace(/ *\([^)]*\) */g, "");
         let Isha = timings.Isha.replace(/ *\([^)]*\) */g, "");
-        
-
+        let Sunrise = timings.Sunrise.replace(/ *\([^)]*\) */g, "");
         let Asr = timings.Asr.replace(/ *\([^)]*\) */g, "");
 
         Fajr = tConvert(Fajr);
@@ -117,6 +130,7 @@ function saveToArray(json){
         Asr = tConvert(Asr);
         Maghrib = tConvert(Maghrib);
         Isha = tConvert(Isha);
+        Sunrise = tConvert(Sunrise);
 
         const date = element.date; 
         //Getting Hijri date from API
@@ -141,6 +155,7 @@ function saveToArray(json){
           asr.innerText = Asr;
           maghrib.innerText = Maghrib;
           isha.innerText = Isha;
+          $('#sun').text(Sunrise);
           hijriDate.innerText = hijriWeekday+', '+hijriDay+' '+hijriMonth+', '+hijriYear;
        }
        //
@@ -231,10 +246,19 @@ let month = months[d.getMonth()];
 let date = d.getDate();
 let year = d.getFullYear();
 
+
 dateBottom.innerText = day + ' ' + month + ' ' + date + ' ' + year;
   
 // Play Alarm
 setInterval(() => {
+
+    // If date changes, Reload the page.
+    const dateNow = new Date();
+    let dayNow =dateNow.getDate().toString();
+    if(dayNow != date){
+        location.reload();
+    }
+
     let fullTime = getLocalTime();
       const fazar = document.getElementById('fajr').innerText;
       const duhur = document.getElementById('dhuhr').innerText;
@@ -322,6 +346,63 @@ function compassPosition(angle){
     return coordinate;
 
 }
+
+
+// Select MEthod of Prayer Schedule Calculation // ISNA/ 
+$('#select').change(function(event){
+    $(".loading").show();
+    $(".loading").delay(2000).slideUp();
+    const method = event.target.value;
+    console.log(method);
+    if(now==0){
+        // Get Country City
+$.getJSON('https://api.ipify.org?format=json', function(data){
+    
+
+    
+    $.getJSON('https://admin.prayerdisplay.com/api/getLocation?ip='+data.ip,function(json){
+        getCity(json,method);
+    
+    })
+    
+    });
+    }
+    else if(now==1){
+        const cityId = selectCity.value;
+        if (cityId == '') alert('Please Select Country and City');
+        else{
+            $.ajax({
+                url: 'https://admin.prayerdisplay.com/api/getSingleCity?id=' + cityId,
+                type: 'get',
+                success: function (res) {  
+                    const data = JSON.parse(res);
+                    const city = data.city;
+                    const country = data.country;
+                    fetch('https://api.aladhan.com/v1/calendarByCity?city=' + city + '&country=' + country + '&method='+ method +'&month=' + mm + '&year=' + yyyy + ' ')
+                        .then(response => response.json())
+                        .then(json => saveToArray(json));
+                }
+    
+            });
+        }
+    }
+   
+    
+});
+
+// function refreshAt(hours, minutes, seconds)
+// {
+//     var now = new Date(), then = new Date();
+//     then.setHours(hours,minutes,seconds,0);
+//     if(then.getTime()<now.getTime())
+//     {
+//         then.setDate(now.getDate() + 1);
+//     }
+
+//     var timeout = (then.getTime() - now.getTime());
+//     setTimeout(function() { window.location.reload(true); }, timeout);
+// }
+// refreshAt(0,1,0);
 
 
 

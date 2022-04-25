@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 @import url("https://fonts.googleapis.com/css?family=Noto Sans");
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 header {
   color: white !important;
   height: 12rem;
@@ -28,7 +29,8 @@ header .container .row .dates {
 body {
   position: relative;
   background: url(../images/Sunset_mosque.jpg) !important;
-  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-size: cover;
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -39,10 +41,7 @@ body {
 }
 
 #sec-11e4 {
-  background-image: url(../images/Sunset_mosque.jpg) !important;
-  background-repeat: no-repeat !important;
-  background-position: center center fixed;
-  background-size: cover;
+  height: 100%;
 }
 
 #sec-11e4 .nav {
@@ -53,7 +52,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
   margin-left: 50%;
   margin-right: 50%;
   margin: auto;
@@ -64,6 +63,7 @@ body {
 
 #sec-11e4 .nav .area {
   font-size: 0.9rem;
+  padding-right: 1rem;
 }
 
 #sec-11e4 .nav .area a {
@@ -78,12 +78,36 @@ body {
   cursor: pointer;
   vertical-align: middle;
   color: aliceblue;
+  font-size: 1rem;
+}
+
+#sec-11e4 .nav .area select {
+  width: 9vw;
+  margin-top: 5px;
+  background-color: rgba(8, 7, 7, 0.651);
+  color: white;
+  border-radius: 1rem;
+  font-size: 1vw;
+}
+
+#sec-11e4 .nav .autoplay {
+  color: white;
+  display: inline;
+}
+
+#sec-11e4 .nav .autoplay i {
+  font-size: 1.5rem;
+  margin-top: 3px;
+}
+
+#sec-11e4 .nav .autoplay .subtitle {
+  display: inline;
+  word-spacing: 2px;
 }
 
 #sec-11e4 .table_div {
-  margin-top: 1rem;
+  margin-top: 0.4rem;
   height: 100%;
-  margin-bottom: 1rem;
   color: white;
 }
 
@@ -93,15 +117,46 @@ body {
   color: #ffee00;
 }
 
+#sec-11e4 .table_div .table thead {
+  background-color: #970808;
+}
+
 #sec-11e4 .table_div .table th {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 #sec-11e4 .table_div .table tbody {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Noto Sans";
   font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+
+#sec-11e4 .other {
+  margin-left: 50%;
+  margin-right: 50%;
+  margin: auto;
+}
+
+#sec-11e4 .other ul {
+  text-align: center;
+  margin-top: 1.5rem;
+  list-style-type: none;
+  font-size: 1.5vw;
+  font-family: Merriweather;
+  color: #2ed70d;
+}
+
+#sec-11e4 .other ul li {
+  background-color: rgba(22, 17, 17, 0.726);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+#sec-11e4 .other ul a {
+  color: #2ed70d;
 }
 
 #sec-11e4 .location_div {
@@ -130,6 +185,9 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   color: white;
   background: #ba0000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ba0000), color-stop(28%, #340101), color-stop(69%, black));
@@ -142,14 +200,105 @@ footer .text {
 }
 
 footer .text marquee {
-  font-size: 2.5rem;
+  font-size: 3vw;
+}
+
+/*
+PEN BY: @AliRanjbar
+Site: www.aliranjbar.ir
+pen lang: html, css, js(jquery)
+*/
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f0110a;
+  z-index: 99;
+}
+
+.loading:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid #f2f2f2;
+  border-top: 6px dotted #f2f2f2;
+  border-bottom: 6px dotted #f2f2f2;
+  border-radius: 50%;
+  -webkit-animation: loading 2s infinite;
+          animation: loading 2s infinite;
+}
+
+.loading:before {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  content: "Loading...";
+  position: absolute;
+  top: 57%;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#AliRanjbar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 13px;
+  color: #444;
+  font-family: 'Acme', sans-serif;
+  z-index: 99;
 }
 
 @media (min-width: 1500px) {
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url(../images/Sunset_mosque.jpg) !important;
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
   header {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    width: 100% !important;
   }
   header .container {
     margin: 0% !important;
@@ -164,14 +313,32 @@ footer .text marquee {
   header .dates h5 {
     font-size: 1.5vw;
   }
+  #sec-11e4 {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
   #sec-11e4 .nav .area a {
     font-size: 1.5vw;
   }
   #sec-11e4 .nav .area i {
     font-size: 1vw;
   }
+  #sec-11e4 .nav .area #select {
+    font-size: 1.4vw !important;
+    width: 12vw;
+  }
+  #sec-11e4 .nav .autoplay i {
+    font-size: 1.5vw;
+  }
+  #sec-11e4 .nav .autoplay #autoplayText {
+    font-size: 1.2vw;
+  }
+  #sec-11e4 .other ul {
+    margin-top: calc(1vh + 1vw) !important;
+    line-height: 3vw;
+  }
   #sec-11e4 .container {
-    margin: 5% !important;
     width: 100% !important;
   }
   #sec-11e4 .row {
@@ -187,16 +354,73 @@ footer .text marquee {
     font-size: 2vw !important;
   }
   #sec-11e4 .table td {
-    font-size: 1.8vw !important;
+    font-size: 2.3vw !important;
     padding-left: 1vw !important;
   }
   #sec-11e4 .location_div {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: calc(1vh + 1vw);
   }
   #sec-11e4 .location_div h4 {
     font-size: 2vw !important;
+  }
+  footer {
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 996px) {
+  select {
+    font-size: 1rem !important;
+    width: 9rem !important;
+  }
+  .other ul {
+    font-size: 1.2rem !important;
+  }
+  .location_div {
+    margin-top: 1rem !important;
+  }
+  footer {
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 575px) {
+  #sec-11e4 select {
+    font-size: 1rem !important;
+    width: 9rem !important;
+  }
+  #sec-11e4 .other ul {
+    font-size: 1rem !important;
+  }
+  #sec-11e4 .table td {
+    font-size: 1.2rem;
+  }
+  #sec-11e4 .table th {
+    font-size: 1.3rem !important;
+  }
+  #sec-11e4 .location_div {
+    margin-top: 1rem;
+  }
+  footer {
+    position: relative;
   }
 }
 /*# sourceMappingURL=custome.css.map */

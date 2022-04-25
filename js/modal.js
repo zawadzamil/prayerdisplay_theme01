@@ -6,7 +6,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementById('closeModal');
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
@@ -22,6 +22,12 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+    if(event.target == modalContact){
+        $('#contactModal').hide();
+    }
+    if(event.target == modalFAQ){
+        $('#faqModal').hide();
     }
 }
 
@@ -96,17 +102,16 @@ $(document).ready(function () {
 });
 
 $('#loc-sub-button').click(function () {
+    now = 1;
+    $(".loading").show();
+    $(".loading").delay(3000).slideUp();
+    
     const cityId = selectCity.value;
     $('#jamat').hide();
     $('#adhan').hide();
     $('#start').hide();
     $('#prayer').show();
-    $('#marquee').empty();
-
-    document.getElementById('marquee').innerHTML = ` <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
-    <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
-   <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
-   <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>`;
+   
 
     if (cityId == '') alert('Please Select Country and City');
     else {
@@ -208,6 +213,9 @@ $('#mosque-sub-btn').click(function () {
 
 });
 
-
+$(document).ready(function(){
+    
+    $(".loading").delay(5000).slideUp();
+  });
 
 

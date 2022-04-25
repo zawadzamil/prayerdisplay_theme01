@@ -27,7 +27,9 @@ header{
 body{
     position: relative;
     background: url(../images/Sunset_mosque.jpg) !important;
-    background-repeat: no-repeat;
+   
+    background-position: center center fixed;
+    background-size: cover;
     
    height: 100%;
    max-width: 100%;
@@ -40,10 +42,10 @@ body{
     
 }
 #sec-11e4{
-    background-image: url(../images/Sunset_mosque.jpg) !important;
-    background-repeat: no-repeat !important;
-    background-position: center center fixed;
-    background-size: cover;
+    
+    
+    height: 100%;
+   
     
 
     .nav{
@@ -52,7 +54,7 @@ body{
         text-align: center;
         word-spacing: 1rem;
         width: fit-content;
-        padding-bottom: 0.8rem;
+        padding-bottom: 0.5rem;
        
         @include center;
         border: 0.12em solid rgba(245, 245, 245, 0.493) ;
@@ -60,6 +62,7 @@ body{
         border-radius: 0.8rem;
         .area{
            font-size: 0.9rem;
+           padding-right: 1rem;
            a{
                color: azure;
                cursor: pointer;
@@ -71,32 +74,77 @@ body{
             cursor: pointer;
             vertical-align: middle;
             color: aliceblue;
+            font-size: 1rem;
+           }
+           select{
+               width: 9vw;
+               margin-top: 5px;
+               background-color: rgba(8, 7, 7, 0.651);
+               color: white;
+               border-radius: 1rem;
+               font-size: 1vw;
+               
            }
            
 
 
 
         }
+        .autoplay{
+            color: white;
+            display: inline;
+            i{
+                font-size: 1.5rem;
+                margin-top: 3px;
+            }
+            .subtitle{
+                display: inline;
+                word-spacing: 2px;
+            }
+
+        }
     }
 .table_div{
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     height: 100%;
-    margin-bottom: 1rem;
     color: white;
     .table{
         background-color: rgba(0, 0, 0, 0.822);
         text-align: center;
         color: rgb(255, 238, 0);
-      
+      thead{
+          background-color: rgb(151, 8, 8);
+      }
         
         th{
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
         }
         tbody{
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-family: "Noto Sans";
             font-weight: bold;
+            letter-spacing: 0.3rem;
+        }
+    }
+}
+.other{
+    @include center;
+    ul{
+        text-align: center;
+        margin-top: 1.5rem;
+        list-style-type: none;
+        font-size: 1.5vw;
+        font-family: Merriweather;
+        color: #2ed70d;
+        li{
+            background-color: rgba(22, 17, 17, 0.726);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        a{
+            color: #2ed70d;
         }
     }
 }
@@ -109,6 +157,7 @@ body{
     border: 1px solid;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    
     h4{
         padding: 0 2rem 1rem 2rem;
         font-size: 1.5rem;
@@ -122,6 +171,7 @@ footer{
     position: relative;
     bottom: 0;
     width: 100%;
+    height: fit-content;
   
     color: white;
     background: rgb(186,0,0);
@@ -130,16 +180,101 @@ background: linear-gradient(180deg, rgba(186,0,0,1) 3%, rgba(52,1,1,1) 28%, rgba
         width: 95%;
         font-family: Merriweather;
         marquee{
-        font-size: 2.5rem;
+        font-size: 3vw;
     }
 
     }
     
 }
+// .loading{
+    
+// }
+/*
+PEN BY: @AliRanjbar
+Site: www.aliranjbar.ir
+pen lang: html, css, js(jquery)
+*/
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(240, 17, 10);
+  z-index: 99;
+}
+.loading:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid #f2f2f2;
+  border-top: 6px dotted #f2f2f2;
+  border-bottom: 6px dotted #f2f2f2;
+  border-radius: 50%;
+  animation: loading 2s infinite;
+}
+.loading:before {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  content: "Loading...";
+  position: absolute;
+  top: 57%;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+
+#AliRanjbar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 13px;
+  color: #444;
+  font-family: 'Acme', sans-serif;
+  z-index: 99;
+}
 
 @media (min-width: 1500px){
+    
+   
+   
+    body{
+        width:100% !important;
+        margin:0 !important;
+        padding:0 !important;
+        background-image: url(../images/Sunset_mosque.jpg) !important;
+        height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+        
+        
+    }
 header{
     height: fit-content;
+    width: 100% !important;
     .container{
         margin: 0% !important;
         width: 100% !important;
@@ -157,6 +292,7 @@ header{
     }
 }
 #sec-11e4{
+    min-height: fit-content;
     .nav{
         .area{
             a{
@@ -165,14 +301,34 @@ header{
             i{
                 font-size: 1vw;
             }
+            #select{
+                font-size: 1.4vw !important;
+                width: 12vw;
+            }
+        }
+        .autoplay{
+            i{
+                font-size: 1.5vw;
+            }
+            #autoplayText{
+                font-size: 1.2vw;
+            }
+        }
+        
+    }
+    .other{
+        ul{
+            margin-top: calc(1vh + 1vw) !important;
+            line-height: 3vw;
         }
     }
     .container{
-        margin: 5% !important;
+       
         width: 100% !important;
     }
 
     .row{
+       
         width: 100% !important;
         #compassDiv{
             h5{
@@ -186,19 +342,80 @@ header{
             font-size: 2vw !important;
         }
         td{
-            font-size: 1.8vw !important;
+            font-size: 2.3vw !important;
             padding-left: 1vw !important;
         }
     }
     .location_div{
         width: fit-content;
+        height: fit-content;
+        margin-top: calc(1vh + 1vw);
         h4{
             font-size: 2vw !important;
     
         }
     }
 }
+footer{
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    
+   
+}
 
+
+}
+@media (max-width: 996px) {
+    select{
+        font-size: 1rem !important;
+        width: 9rem !important;
+    }
+    .other{
+        ul{
+            font-size: 1.2rem !important;
+        }
+    }
+    .location_div{
+        margin-top: 1rem !important;
+    }
+    footer{
+        margin-top: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: fit-content;
+    }
+    
+}
+@media (max-width: 575px){
+    #sec-11e4{
+        select{
+            font-size: 1rem !important;
+            width: 9rem !important;
+        }
+        .other{
+            ul{
+                font-size: 1rem !important;
+            }
+        }
+        .table{
+            td{
+                font-size:  1.2rem;
+            }
+            th{
+                font-size: 1.3rem !important;
+            }
+        }
+        .location_div{
+            margin-top: 1rem;
+        }
+    }
+    footer{
+        position: relative;
+    }
 
 }
 

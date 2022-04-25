@@ -23,14 +23,14 @@
 
 /* Modal Content/Box */
 .modal-content {
-    background-image: url("../images/mb01.jpg");
+    background-image: url("../images/modalBG.jpg");
     margin: 10% auto;
     /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     /* Could be more or less, depending on screen size */
-    height: 400px;
+    height: fit-content;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -38,13 +38,26 @@
 }
 
 .modal-content h3 {
-    color: aliceblue;
+    color: rgb(255, 230, 7);
+    font-family: Futara;
+    background-color: rgba(0, 0, 0, 0.602);
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .select {
     color: aliceblue;
-    background-color: rgba(3, 3, 3, 0.664);
+    background-color: rgba(3, 3, 3, 0.815);
     padding: 10px;
+    font-size: 1rem;
+    font-family: Segoe UI;
+    font-size: 1.2rem;
+}
+input{
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 1rem;
+    background-color: red;
 }
 
 label {
@@ -180,7 +193,54 @@ label {
     cursor: pointer;
 }
 
+@media (min-width: 1400px) {
+    
+    .modal-content{
+        margin-top:25%;
+        height: fit-content !important;
+    }
+    h3{
+        font-size: 3vw !important;
+    }
+    .select{
+        font-size: 2vw !important;
+    }
+   #locationDiv select{
+        font-size: 1.5vw !important;
+        margin-left: 1vw !important;
+    }
+  #country ,#city{
+        height: fit-content !important;
+    }
+    input{
+        width: 2vw!important; 
+        height: 2vw!important; 
+    }
+   #loc-sub-button,#mosque-sub-btn{
+       height: fit-content;
+       width: fit-content;
+       font-size: 1.5vw !important;
+       margin-bottom: 2rem !important;
 
+   }
+   #locationDiv{
+       height: fit-content  !important;
+   }
+   #mosqueDiv select{
+    font-size: 1.5vw !important;
+    margin-left: 1vw !important;
+
+   }
+   #countryM ,#mosque{
+    height: fit-content !important;
+}
+#mosqueDiv{
+    height: fit-content !important;
+}
+    
+    
+
+}
 
 @media (max-width: 991px) {
     .modal-content{
@@ -228,7 +288,7 @@ label {
         width: 88%;
     }
     .modal-content{
-        height: 450px;
+        height: fit-content;
     }
     
 
@@ -236,12 +296,17 @@ label {
 @media (max-width: 534px){
     .select{
         width: 97%;
+        font-size: 0.9rem;
+    }
+    input{
+        width: 1rem;
+    height: 1rem;
     }
     #city{
         width: 14rem;
     }
     .modal-content{
-        height: 500px;
+        height: fit-content;
     }
 
 }

@@ -44,6 +44,7 @@ img{
   color: rgb(147, 250, 28);
 }
 #playButton{
+  font-size: 2.5rem;
   
   border-radius: 50%;
 }

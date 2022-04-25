@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
 @import url("https://fonts.googleapis.com/css?family=Bebas Neue");
 @import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Playfair Display");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 html, body {
   overflow-x: hidden;
 }
@@ -21,7 +23,7 @@ body {
 
 header {
   color: white !important;
-  height: 10rem;
+  height: 11rem;
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14%, rgba(0, 0, 0, 0.950018)), color-stop(53%, #ba0000), color-stop(86%, rgba(0, 0, 0, 0.944415)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.950018) 14%, #ba0000 53%, rgba(0, 0, 0, 0.944415) 86%);
@@ -32,6 +34,12 @@ header .row {
   margin-right: -4rem;
   padding: 0% !important;
   text-align: center;
+}
+
+header .row #autoPlay {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  display: block;
 }
 
 header .row .main {
@@ -64,11 +72,12 @@ header .row .dates h5 {
   background-position: center center fixed;
   width: 100%;
   height: 100%;
-  min-height: 511px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 #sec-11e4 .table_div .row .table-responsive {
-  margin-top: 0.5rem;
   height: 100%;
 }
 
@@ -80,13 +89,118 @@ header .row .dates h5 {
 
 #sec-11e4 .table_div .row .table-responsive table th {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #sec-11e4 .table_div .row .table-responsive table td {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   font-family: Noto Sans;
+}
+
+#sec-11e4 .slider {
+  /* Slideshow container */
+  /* Slides */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Add an italic font style to all quotes */
+}
+
+#sec-11e4 .slider .slideshow-container {
+  position: relative;
+  background: #030303c2;
+  max-height: 20rem;
+  min-height: 20rem;
+  border: 1px dashed red;
+  overflow: hidden;
+}
+
+#sec-11e4 .slider .mySlides {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  color: white;
+  overflow: hidden;
+  font-family: Merriweather;
+  vertical-align: middle;
+}
+
+#sec-11e4 .slider .mySlides q {
+  font-size: 1.2rem;
+}
+
+#sec-11e4 .slider .prev, #sec-11e4 .slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#sec-11e4 .slider .next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#sec-11e4 .slider .prev:hover, #sec-11e4 .slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+#sec-11e4 .center {
+  width: 100%;
+  text-align: center;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#sec-11e4 .center .parent {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  margin-top: -1rem;
+}
+
+#sec-11e4 .center .parent img {
+  margin-left: 100%;
+  margin-top: -1rem;
+}
+
+#sec-11e4 .logo {
+  width: 8rem;
+  height: 8rem;
+  max-width: 100%;
+  margin-right: 50%;
+  margin-left: 50%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+#sec-11e4 .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
 }
 
 #sec-11e4 .location_div {
@@ -104,15 +218,20 @@ header .row .dates h5 {
 
 #sec-11e4 .location_div h4 {
   padding: 0rem 4rem 0rem 4rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
+}
+
+#sec-11e4 .location_div h5 {
+  color: white;
+  font-family: Oswald;
 }
 
 footer {
   position: relative;
   bottom: 0;
   width: calc(100%);
-  padding: 20px;
+  padding: 15px;
   color: white;
   background: #ba0000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ba0000), color-stop(28%, #340101), color-stop(69%, black));
@@ -125,7 +244,71 @@ footer .text {
 }
 
 footer .text marquee {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f0110a;
+  z-index: 99;
+}
+
+.loading:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid #f2f2f2;
+  border-top: 6px dotted #f2f2f2;
+  border-bottom: 6px dotted #f2f2f2;
+  border-radius: 50%;
+  -webkit-animation: loading 2s infinite;
+          animation: loading 2s infinite;
+}
+
+.loading:before {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  content: "Loading...";
+  position: absolute;
+  top: 57%;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 1400px) {
@@ -137,6 +320,17 @@ footer .text marquee {
     height: -moz-fit-content;
     height: fit-content;
     width: 100% !important;
+  }
+  header .first {
+    padding-left: 5rem;
+    padding-top: 3rem;
+  }
+  header #autoPlay {
+    font-size: 1.5vw !important;
+  }
+  header i {
+    font-size: 3vw !important;
+    margin-bottom: 1rem;
   }
   header #main {
     font-size: 2vw !important;
@@ -165,13 +359,39 @@ footer .text marquee {
   #sec-11e4 td, #sec-11e4 th {
     font-size: 2vw !important;
   }
+  #sec-11e4 .slideshow-container {
+    min-height: 23vw !important;
+    max-height: 23vw !important;
+  }
+  #sec-11e4 .mySlides q {
+    font-size: 2vw !important;
+  }
   #sec-11e4 .row img {
     width: 100%;
     max-height: 25vw;
     min-height: 25vw;
   }
+  #sec-11e4 .location_div {
+    margin-top: calc(2vh + 2vw);
+  }
+  #sec-11e4 .location_div h5 {
+    font-size: 1.2vw !important;
+  }
   #sec-11e4 .location_div #location {
     font-size: 2vw !important;
+  }
+  #sec-11e4 .center .parent {
+    margin-top: -3rem !important;
+  }
+  #sec-11e4 .center .parent .logo {
+    width: 7vw;
+    height: 7vw;
+  }
+  #sec-11e4 .center .parent img {
+    margin-left: 100% !important;
+  }
+  footer {
+    bottom: 2vh;
   }
   footer #marquee {
     font-size: 3vw;
@@ -189,7 +409,7 @@ footer .text marquee {
     width: 100%;
   }
   header .row {
-    margin-top: -45%;
+    margin-top: 4%;
   }
   header .row #time {
     font-size: 3.5rem !important;
@@ -202,6 +422,16 @@ footer .text marquee {
   }
   th {
     font-size: 0.9rem !important;
+  }
+  .center .parent {
+    display: block !important;
+    margin-top: 5% !important;
+  }
+  .center .parent img {
+    margin-top: 5% !important;
+    margin-left: 50% !important;
+    margin-right: 50%;
+    margin: auto !important;
   }
   footer #marquee {
     font-size: 1.5rem;
@@ -222,7 +452,7 @@ footer .text marquee {
     width: 100%;
   }
   header .row {
-    margin-top: -45%;
+    margin-top: 4%;
   }
   header .row #time {
     font-size: 4rem !important;
@@ -236,6 +466,16 @@ footer .text marquee {
   th {
     font-size: 1rem !important;
   }
+  .center .parent {
+    display: block !important;
+    margin-top: 5% !important;
+  }
+  .center .parent img {
+    margin-top: 5% !important;
+    margin-left: 50% !important;
+    margin-right: 50%;
+    margin: auto !important;
+  }
   footer #marquee {
     font-size: 1.5rem;
   }
@@ -244,35 +484,42 @@ footer .text marquee {
   }
 }
 
-@media (min-width: 600px) and (max-width: 750px) {
+@media (min-width: 600px) and (max-width: 768px) {
   header {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   header .row {
-    margin-top: -53%;
+    margin-top: 2%;
   }
   header .row .third {
     margin-top: -19%;
   }
+  .center .parent {
+    display: block !important;
+    margin-top: 5% !important;
+  }
+  .center .parent img {
+    margin-top: 5% !important;
+    margin-left: 50% !important;
+    margin-right: 50%;
+    margin: auto !important;
+  }
+  footer marquee {
+    font-size: 1.2rem;
+  }
 }
 
-@media (min-width: 750px) and (max-width: 945px) {
+@media (min-width: 768px) and (max-width: 945px) {
   header {
     height: 10rem;
   }
-  header #time {
-    font-size: 5.4rem !important;
+  #sec-11e4 .center .parent {
+    margin-top: 3rem !important;
   }
-  header .dates h4 {
-    font-size: 1rem !important;
-  }
-  header .dates h5 {
-    font-size: 0.8rem !important;
-  }
-  #sec-11e4 {
-    height: 100vh;
+  #sec-11e4 .center .parent img {
+    margin: 0% !important;
   }
   footer {
     bottom: 0;
@@ -287,6 +534,12 @@ footer .text marquee {
   }
   #sec-11e4 table td {
     font-size: 1.2rem !important;
+  }
+  #sec-11e4 .center .parent {
+    margin-top: 3rem !important;
+  }
+  #sec-11e4 .center .parent img {
+    margin: 0% !important;
   }
 }
 

@@ -7,10 +7,13 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="page_type" content="np-template-header-footer-from-plugin">
+   <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
   <title>Prayer Time Display</title>
   
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" href="css/modal.css" media="screen">
+  <link rel="stylesheet" href="css/contact.css" media="screen">
+  <link rel="stylesheet" href="css/faq.css" media="screen">
 
   <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
   <link id="u-theme-google-font" rel="stylesheet"
@@ -40,6 +43,13 @@
 </head>
 
 <body >
+  <div class="loading" ></div>
+
+
+
+
+
+
   <header>
     <div class="container">
       <div class="row">
@@ -56,24 +66,40 @@
     </div>
   </header>
 
-
-
-
-
   <section class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-image u-shading u-section-1"
     id="sec-11e4">
     <div class="nav">
       <div class="area">
         <a href="https://admin.prayerdisplay.com/">Login/Register</a>
         <a id="myBtn">Select_Location/Mosque</a>
-        <i class="fa fa-play-circle" id="playButton"></i>
+        <i class="fa fa-desktop" id="fullScreen" onclick="fullscreen()"></i>
+        <select name="" id="select">
+          <option value="1" selected disabled  >Select a Method</option>
+          <option value="1">University of Islamic Sciences, Karachi</option>
+          <option value="2">Islamic Society of North America</option>
+          <option value="3"> Muslim World League</option>
+          <option value="4">Umm Al-Qura University, Makkah</option>
+          <option value="7"> Institute of Geophysics, University of Tehran</option>
+          <option value="9">Kuwait</option>
+          <option value="10"> Qatar</option>
+          <option value="12">Union Organization islamic de France</option>
+          <option value="14">Spiritual Administration of Muslims of Russia</option>
+        </select>
+        <div class="autoplay">
+          <i class="fa fa-play-circle" id="playButton"></i>
+          
+          <span class="subtitle" id="autoplayText">(Adhan Off)</span>
+        </div>
 
       </div>
+     
     </div>
+   
 
     <div class="table_div">
       <div class="container">
         <div class="row">
+          <!-- TAble -->
           <div class="col-lg-8 col-md-8 col-xl-8">
             <div class="table-responsive">
               <table class="table  table-bordered  align-middle">
@@ -94,6 +120,11 @@
                   <tr>
                     <td>Fajr</td>
                     <td id="fajr">04:29 AM</td>
+
+                  </tr>
+                  <tr>
+                    <td>Sunrise</td>
+                    <td id="sun">04:29 AM</td>
 
                   </tr>
 
@@ -128,6 +159,7 @@
 
             </div>
           </div>
+          <!-- Compass -->
           <div class="col-lg-4 col-md-4 col-xl-4">
             <div  id="compassDiv" >
               <h5 style="text-align: center;">Qibla Angle <span id="angle"
@@ -144,6 +176,15 @@
               <div id="pointer"></div>
             </div>
             </div>
+
+            <div class="other">
+              <ul>
+                <li> <a href="http://islamiccenter.sk.ca/donate-now" target="_blank"> Donate</a></li>
+                <li> <span  id="contactUS">Contact Us</span> </li>
+                <li><span id="faqButton">FAQ</span></li>
+              </ul>
+            </div>
+
             <div class="slider" style="display: none;">
                <!--Image Slider -->
        <div class=" rounded-lg text-center px-10 ">
@@ -173,7 +214,7 @@
 
     </div>
     
-    <!--END Location Div-->
+    <!--END Location Div--> 
     </div>
   </section>
 
@@ -181,12 +222,24 @@
   <footer id="footer">
     <div class="text">
       <marquee id="marquee">
+        <span>**Call upon me, I will respond to you | Surah Ghafir 40:60</span>
+        <span>**And Allah would not punish them while they seek forgiveness | Surah Al-Anfal 8:33</span>
+        <span>**So remember me; I will remember you | Surah Al-Baqarah 2:152</span>
+        <span>**And He has made me blessed wherever I am | Surah Maryam 19:31</span>
+        <span>**He knows what is within the heavens and earth and knows what you conceal and what you declare. And Allah (SWT) is Knowing of that within the breasts | At-Taghabun 64:4</span>
+        <span>**And whoever puts all his trust in Allah (SWT), He will be enough for him | Surah At-Talaq 65:1-3</span>
+        <span>**If you are grateful, I will surely increase you [in favor] | Surah Ibrahim 14:7</span>
+        <span>**Between them is a barrier which they do not transgress | Surah Al-Rahman</span>
+        <span>**And He found you lost and guided [you] | Surah Ad-Duhaa 93:7</span>
+        <span>**And let there be from you a nation inviting to good, enjoining what is right and forbidding what is wrong, and those will be the successful | Surah Ali ‘Imran 3:104</span>
+        <span>**Our Lord, forgive me and my parents and the believers the Day the account is established | Surah Ibrahim 14:41</span>
+        <span>**Indeed, Allah is my Lord and your Lord, so worship Him. That is the straight path | Surah Ali ‘Imran 3:51</span>
+        <span>**It may be that you dislike a thing which is good for you and that you like a thing which is bad for you. Allah knows but you do not know | Surah Al-Baqarah 2:216</span>
+        <span>**And [remember] when your Lord proclaimed, ‘If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, ‘My punishment is severe.’ | Surah Ibrahim 14:7</span>
+        <span>**And verily the hereafter, will be better for thee. Than the present | Surah Al-Dhuha 93:4</span>
+        <span>**And who despairs from the mercy of his Lord, except those astray? | Surah Al-Hijr (15:56)</span>
+        <span>**You prefer the life of this world, while the hereafter is better & more lasting | Surah Al-A’la (87:16)</span>
       
-        <span>Do not despair of the mercy of Allah. Quran 39:53**</span>
-        <span>Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah.
-          Indeed in that are signs for a people who believe. – Quran (16:79)**</span>
-        <span>So be patient. Indeed, the promise of ALLAH is truth – Quran 30:60**</span>
-        <span>And for those who fear Allah, he will make their path easy – Quran – Al talak: 4**</span>
       </marquee>
         
     </div>
@@ -202,14 +255,14 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close" id="closeModal">&times;</span>
       <h3>Select Location or Mosque</h3>
       <div class="select">
-        <label for="startCheck">Schedule By Location
+        <label for="startCheck">Schedule By Location 👉
           <input type="checkbox" name="locatoin" id="locationCheck">
         </label>
 
-        <label for="startCheck">Schedule By Mosques
+        <label for="startCheck">Schedule By Mosques 👉
           <input type="checkbox" name="mosque" id="mosqueCheck">
         </label>
 
@@ -255,8 +308,92 @@
 
   </div>
 
+  <!-- Contact -->
+  <div class="contact" id="contactModal">
+    <div class="modal-content ">
+      <span class="close" id="closeContact">&times;</span>
+      <div class="container">
+        <h1>Contact US</h1>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 box">
+            <div class="icon">
+                <object data="icons/call.svg" > </object>
+              
+            </div>
+            <span class="heading">Call:</span>
+             <span class="item">
+              <a href="tel:001634702886">+1 (639) 470 - 2886</a>
+            </span>
+            <br>
+            <span class="footer">Available 24/7</span>
+          </div>
+          <div class="col-md-4 col-lg-4 box">
+            <div class="icon">
+                <object data="icons/email.svg" > </object>
+              
+            </div>
+            <span class="heading">Email:</span>
+             <span class="item">
+              <a href="mailto:BarakaTechsol@gmail.com">BarakaTechsol@gmail.com</a>
+            </span>
+            <br>
+            <span class="footer">Tipical Reply Within Hours</span>
+          </div>
+          <div class="col-md-4 col-lg-4 box">
+            <div class="icon">
+                <object data="icons/location.svg" > </object>
+              
+            </div>
+            <span class="heading">Address:</span>
+             <span class="item">
+              <a href="https://goo.gl/maps/YfS3ftpAyDjxED7k9" target="_blank">Saskatoon, Saskatchewan, Canada</a> 
+            </span>
+            <br>
+           
+          </div>
+         
+        </div>
+      </div>
+      
+
+
+    </div>
+  </div>
+
+  <!-- FAQ -->
+
+  <div class="faq" id="faqModal">
+    <div class="modal-content " id="">
+      <span class="close" id="closeFAQ">&times;</span>
+      <h1>FAQ's</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 question">
+            <ul id="list">
+              <li id="0">1.Is your site secure? </li>
+              <li id="1">2.How Do I Login?</li>
+              <li id="2">3.How to Verify Email?</li>
+              <li id="3">4.How to Change Location?</li>
+              <li id="4">5.How to Stop Audio?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row answer">
+          
+         
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
   <script src="js/function.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/faq.js"></script>
 
 </body>
 
