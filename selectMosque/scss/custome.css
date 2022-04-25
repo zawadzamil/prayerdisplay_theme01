@@ -325,7 +325,7 @@ footer .text marquee {
     padding-left: 5rem;
     padding-top: 3rem;
   }
-  header #autoPlay {
+  header .autoPlay {
     font-size: 1.5vw !important;
   }
   header i {
@@ -409,7 +409,7 @@ footer .text marquee {
     width: 100%;
   }
   header .row {
-    margin-top: 4%;
+    margin-top: -45%;
   }
   header .row #time {
     font-size: 3.5rem !important;
@@ -452,7 +452,7 @@ footer .text marquee {
     width: 100%;
   }
   header .row {
-    margin-top: 4%;
+    margin-top: -45%;
   }
   header .row #time {
     font-size: 4rem !important;
@@ -491,7 +491,7 @@ footer .text marquee {
     height: fit-content;
   }
   header .row {
-    margin-top: 2%;
+    margin-top: -53%;
   }
   header .row .third {
     margin-top: -19%;
