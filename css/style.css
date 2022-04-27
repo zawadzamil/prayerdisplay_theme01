@@ -1,6 +1,6 @@
  :root{
    --degreeFrom: 180deg;
-   --degreeTo: 360deg;
+   --degreeTo: 180deg;
  }
  #headerSection{
   background: rgb(0,0,0);

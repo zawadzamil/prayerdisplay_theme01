@@ -15,7 +15,7 @@ header .container {
 }
 
 header .container .row #time {
-  font-size: 11vw;
+  font-size: 10.5vw;
   font-weight: bold;
   font-family: Bahnschrift;
   text-align: center;
@@ -62,7 +62,7 @@ body {
 }
 
 #sec-11e4 .nav .area {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding-right: 1rem;
 }
 
@@ -78,16 +78,16 @@ body {
   cursor: pointer;
   vertical-align: middle;
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #sec-11e4 .nav .area select {
-  width: 9vw;
+  width: 11vw;
   margin-top: 5px;
   background-color: rgba(8, 7, 7, 0.651);
   color: white;
   border-radius: 1rem;
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 #sec-11e4 .nav .autoplay {
@@ -106,7 +106,7 @@ body {
 }
 
 #sec-11e4 .table_div {
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
   height: 100%;
   color: white;
 }
@@ -181,13 +181,10 @@ body {
 }
 
 footer {
-  vertical-align: bottom;
   position: relative;
   bottom: 0;
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: calc(100%);
+  padding: 15px;
   color: white;
   background: #ba0000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ba0000), color-stop(28%, #340101), color-stop(69%, black));
@@ -319,20 +316,21 @@ pen lang: html, css, js(jquery)
     min-height: fit-content;
   }
   #sec-11e4 .nav .area a {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
   }
   #sec-11e4 .nav .area i {
-    font-size: 1vw;
+    font-size: 2.6vw;
   }
   #sec-11e4 .nav .area #select {
-    font-size: 1.4vw !important;
-    width: 12vw;
+    font-size: 1.6vw !important;
+    width: 15vw;
+    padding: 1rem;
   }
   #sec-11e4 .nav .autoplay i {
-    font-size: 1.5vw;
+    font-size: 2.6vw;
   }
   #sec-11e4 .nav .autoplay #autoplayText {
-    font-size: 1.2vw;
+    font-size: 1.7vw;
   }
   #sec-11e4 .other ul {
     margin-top: calc(1vh + 1vw) !important;
@@ -367,16 +365,10 @@ pen lang: html, css, js(jquery)
     margin-top: calc(1vh + 1vw);
   }
   #sec-11e4 .location_div h4 {
-    font-size: 2vw !important;
+    font-size: calc(1.5vw + 1vh) !important;
   }
   footer {
-    margin-top: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    bottom: 2vw;
   }
 }
 

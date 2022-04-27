@@ -12,7 +12,7 @@ header{
        margin-top: 0% !important;
        .row{
            #time{
-               font-size: 11vw;
+               font-size: 10.5vw;
                font-weight: bold;
                font-family: Bahnschrift;
                text-align: center;
@@ -61,7 +61,7 @@ body{
         background-color: rgba(0, 0, 0, 0.602);
         border-radius: 0.8rem;
         .area{
-           font-size: 0.9rem;
+           font-size:1.2rem;
            padding-right: 1rem;
            a{
                color: azure;
@@ -74,15 +74,15 @@ body{
             cursor: pointer;
             vertical-align: middle;
             color: aliceblue;
-            font-size: 1rem;
+            font-size: 1.5rem;
            }
            select{
-               width: 9vw;
+               width: 11vw;
                margin-top: 5px;
                background-color: rgba(8, 7, 7, 0.651);
                color: white;
                border-radius: 1rem;
-               font-size: 1vw;
+               font-size: 1.2vw;
                
            }
            
@@ -105,7 +105,8 @@ body{
         }
     }
 .table_div{
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
+  
     height: 100%;
     color: white;
     .table{
@@ -167,12 +168,10 @@ body{
 
 }
 footer{
-    vertical-align: bottom;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: fit-content;
-  
+    position:relative;
+    bottom:0;
+    width: calc(100%);
+    padding: 15px;
     color: white;
     background: rgb(186,0,0);
 background: linear-gradient(180deg, rgba(186,0,0,1) 3%, rgba(52,1,1,1) 28%, rgba(0,0,0,1) 69%);
@@ -296,22 +295,23 @@ header{
     .nav{
         .area{
             a{
-                font-size: 1.5vw;
+                font-size: 1.8vw;
             }
             i{
-                font-size: 1vw;
+                font-size: 2.6vw;
             }
             #select{
-                font-size: 1.4vw !important;
-                width: 12vw;
+                font-size: 1.6vw !important;
+                width: 15vw;
+                padding: 1rem;
             }
         }
         .autoplay{
             i{
-                font-size: 1.5vw;
+                font-size: 2.6vw;
             }
             #autoplayText{
-                font-size: 1.2vw;
+                font-size: 1.7vw;
             }
         }
         
@@ -351,17 +351,13 @@ header{
         height: fit-content;
         margin-top: calc(1vh + 1vw);
         h4{
-            font-size: 2vw !important;
+            font-size: calc(1.5vw + 1vh)!important;
     
         }
     }
 }
 footer{
-    margin-top: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: fit-content;
+    bottom: 2vw;
     
    
 }

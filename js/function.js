@@ -55,14 +55,14 @@ playButton.addEventListener('click',function(){
     if(!clicked)
     {
         playButton.style.color = 'lightgreen';
-        alert('Adhan Autoplay Enabled')
+       
         clicked = true;
         $('#autoplayText').text('(Adhan On)')
     }
     else{
         playButton.style.color = 'white';
         clicked = false;
-        alert('Adhan Autoplay Disabled');
+       
         $('#autoplayText').text('(Adhan Off)')
     }
     

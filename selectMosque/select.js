@@ -23,14 +23,14 @@ let clicked = false;
 playButton.addEventListener('click', function () {
     if (!clicked) {
         playButton.style.color = 'red';
-        alert('Adhan Autoplay Enabled')
+      
         clicked = true;
         $('#autoPlay').text('AdhanPlay(On)');
     }
     else {
         playButton.style.color = 'inherit';
         clicked = false;
-        alert('Adhan Autoplay Disabled');
+       
         $('#autoPlay').text('AdhanPlay(Off)');
     }
 
