@@ -15,6 +15,7 @@ $('#start').hide();
 $('#adhan').hide();
 $('#jamat').hide(); 
 
+// Full SCreen Function
 let isFull = false;
 function fullscreen(){
     if(!isFull){
@@ -51,8 +52,15 @@ const hijriDate = document.getElementById('hijriDate');
 // Playbutton Autoplay or Not
 const playButton = document.getElementById('playButton');
 let clicked = false;
+if(sessionStorage.getItem("checked")=='true')
+{
+         playButton.style.color = 'lightgreen';
+       
+        clicked = true;
+        $('#autoplayText').text('(Adhan On)')
+}
 playButton.addEventListener('click',function(){
-    if(!clicked)
+    if(!clicked )
     {
         playButton.style.color = 'lightgreen';
        
@@ -256,7 +264,18 @@ setInterval(() => {
     const dateNow = new Date();
     let dayNow =dateNow.getDate().toString();
     if(dayNow != date){
+        if(clicked)
+        {
+            sessionStorage.setItem("checked", true);
+        }
+        else{
+            sessionStorage.setItem("checked", false);
+        }
+        
+        
         location.reload();
+        console.log('Done Reloading');
+
     }
 
     let fullTime = getLocalTime();

@@ -196,43 +196,63 @@ label {
 @media (min-width: 1400px) {
     
     .modal-content{
-        margin-top:25%;
+        margin-top:15%;
         height: fit-content !important;
     }
     h3{
-        font-size: 3vw !important;
+        font-size: 2.5vw !important;
     }
     .select{
-        font-size: 2vw !important;
+        font-size: 2.5vw !important;
     }
    #locationDiv select{
-        font-size: 1.5vw !important;
+        font-size: 2.3vw !important;
         margin-left: 1vw !important;
     }
   #country ,#city{
         height: fit-content !important;
+      
+        padding: 1rem;
+       
+    }
+    #country{
+        width: 12vw  !important;
+    }
+    #city{
+        width: 18vw  !important;
+
     }
     input{
-        width: 2vw!important; 
-        height: 2vw!important; 
+        width: 2.5vw!important; 
+        height: 2.5vw!important; 
     }
    #loc-sub-button,#mosque-sub-btn{
        height: fit-content;
        width: fit-content;
-       font-size: 1.5vw !important;
+       font-size: 2vw !important;
        margin-bottom: 2rem !important;
+       padding: 1rem;
+       border-radius: 1rem;
 
    }
    #locationDiv{
        height: fit-content  !important;
    }
    #mosqueDiv select{
-    font-size: 1.5vw !important;
+    font-size: 2.3vw !important;
     margin-left: 1vw !important;
 
    }
    #countryM ,#mosque{
     height: fit-content !important;
+    padding: 1rem;
+}
+#countryM{
+    width: fit-content  !important;
+
+}
+#mosque{
+    width: fit-content !important;
 }
 #mosqueDiv{
     height: fit-content !important;

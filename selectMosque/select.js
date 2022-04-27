@@ -17,9 +17,28 @@ $('#main').click(function () {
     window.location.href = "../index.html";
 
 });
+let isFull = false;
+$('#full').click(function(){
+    if(!isFull){
+        document.documentElement.requestFullscreen();
+        isFull = true;
+    }
+    else{
+        document.exitFullscreen();
+        isFull = false;
+    }
+})
 // Playbutton Autoplay or Not
 const playButton = document.getElementById('playButton');
 let clicked = false;
+if(sessionStorage.getItem("checkedCustome")=='true')
+{
+    playButton.style.color = 'red';
+      
+    clicked = true;
+    $('#autoPlay').text('AdhanPlay(On)');
+}
+
 playButton.addEventListener('click', function () {
     if (!clicked) {
         playButton.style.color = 'red';
@@ -83,7 +102,11 @@ $.ajax({
             // });
             $('#location').text(res.mosque_name);
             $('#address').text(res.address);
-            $('#logoImage').attr("src","http://admin.prayerdisplay.com/public/images/"+res.logo);
+            if(res.logo != null){
+                $('#logoImage').attr("src","http://admin.prayerdisplay.com/public/images/"+res.logo);
+
+            }
+           
             const city = res.city;
             const country = res.country;
             const method = res.method;
@@ -342,6 +365,13 @@ setInterval( ()=>{
      const dateNow = new Date();
      let dayNow =dateNow.getDate().toString();
      if(dayNow != date){
+        if(clicked)
+        {
+            sessionStorage.setItem("checkedCustome", true);
+        }
+        else{
+            sessionStorage.setItem("checkedCustome", false);
+        }
          location.reload();
      }
     $.ajax({
